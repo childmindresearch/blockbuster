@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C-PAC NodeBlocks Index</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer components {
+            .tag {
+                @apply inline-block px-2 py-1 text-sm rounded-full font-mono
+                       bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300;
+            }
+            .search-input {
+                @apply w-full md:w-96 px-4 py-2 rounded-lg border 
+                       bg-white dark:bg-gray-800 
+                       border-gray-300 dark:border-gray-600
+                       focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 
+                       focus:border-transparent outline-none
+                       text-gray-900 dark:text-gray-100;
+            }
+            .nodeblock {
+                @apply p-6 rounded-xl mb-6 
+                       bg-white dark:bg-gray-800 
+                       shadow-sm border border-gray-200 dark:border-gray-700
+                       transition-all duration-200 ease-in-out
+                       hover:shadow-md;
+            }
+            .github-button {
+                @apply inline-flex items-center px-3 py-1 rounded-lg text-sm font-medium
+                       bg-gray-800 dark:bg-gray-700 text-white
+                       hover:bg-gray-700 dark:hover:bg-gray-600
+                       transition-colors duration-200;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 min-h-screen">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Header -->
+        <div class="flex justify-between items-center mb-8">
+            <h1 class="text-3xl font-bold">📼 BlockBuster</h1>
+            <button id="theme-toggle" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700">
+                <!-- Sun icon -->
+                <svg class="w-6 h-6 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                          d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
+                    </path>
+                </svg>
+                <!-- Moon icon -->
+                <svg class="w-6 h-6 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                          d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z">
+                    </path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Search Controls -->
+        <div class="sticky top-0 z-10 bg-gray-50 dark:bg-gray-900 py-4 mb-8 border-b dark:border-gray-700">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                <input type="text" id="search" placeholder="Search nodeblocks..." 
+                       class="search-input">
+                <span id="count" class="text-sm text-gray-600 dark:text-gray-400 font-medium"></span>
+            </div>
+        </div>
+
+        <!-- NodeBlocks Container -->
+        <div id="nodeblocks"></div>
+    </div>
+
+    <script>
+        const GITHUB_REPO = 'FCP-INDI/C-PAC';
+        const GITHUB_BRANCH = 'develop';
+        const GITHUB_HASH = '61ad414447023daf0e401a81c92267b09c64ed94';
+
+        // Theme Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const theme = localStorage.getItem('theme') || 
+                     (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        
+        function updateTheme(theme) {
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+            localStorage.setItem('theme', theme);
+        }
+
+        updateTheme(theme);
+
+        themeToggle.addEventListener('click', () => {
+            const newTheme = document.documentElement.classList.contains('dark') ? 'light' : 'dark';
+            updateTheme(newTheme);
+        });
+
+        function getGithubUrl(filePath, lineNumber) {
+            return `https://github.com/${GITHUB_REPO}/blob/${GITHUB_HASH}/${filePath}#L${lineNumber}`;
+        }
+
+        function getGithubBlobUrl(filePath) {
+            return `https://github.com/${GITHUB_REPO}/blob/${GITHUB_HASH}/${filePath}`;
+        }
+
+        fetch('nodeblock_index.json')
+            .then(response => response.json())
+            .then(data => {
+                const container = document.getElementById('nodeblocks');
+                const searchInput = document.getElementById('search');
+                const countSpan = document.getElementById('count');
+                
+                function updateCount(visible) {
+                    countSpan.textContent = `Showing ${visible} of ${data.length} nodeblocks`;
+                }
+
+                data.forEach(block => {
+                    const div = document.createElement('div');
+                    div.className = 'nodeblock';
+                    
+                    let inputs = Array.isArray(block.decorator_args.inputs) ? 
+                        block.decorator_args.inputs.flat() : [];
+                    let outputs = Array.isArray(block.decorator_args.outputs) ? 
+                        block.decorator_args.outputs.flat() : [];
+
+                    const githubUrl = getGithubUrl(block.file, block.line_number);
+                    const githubFileUrl = getGithubBlobUrl(block.file);
+
+                    div.innerHTML = `
+                        <div class="flex justify-between items-start mb-4">
+                            <h2 class="text-xl font-semibold">${block.name}</h2>
+                            <a href="${githubUrl}" class="github-button" target="_blank">
+                                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                View on GitHub
+                            </a>
+                        </div>
+                        <div class="text-sm text-gray-600 dark:text-gray-400 font-mono mb-4">
+                            📁 <a href="${githubUrl}" class="hover:text-blue-500 dark:hover:text-blue-400" 
+                                target="_blank">${block.file}:${block.line_number}</a>
+                        </div>
+                        <div class="space-y-3">
+                            ${block.decorator_args.config ? `
+                                <div>
+                                    <span class="font-medium">Config:</span>
+                                    <span class="tag">${block.decorator_args.config.join(' → ')}</span>
+                                </div>` : ''}
+                            ${block.decorator_args.switch ? `
+                                <div>
+                                    <span class="font-medium">Switch:</span>
+                                    ${Array.isArray(block.decorator_args.switch[0]) 
+                                        ? block.decorator_args.switch.map(path => 
+                                            `<span class="tag">${path.join(' → ')}</span>`
+                                          ).join(' AND ')
+                                        : `<span class="tag">${block.decorator_args.switch.join(' → ')}</span>`}
+                                </div>` : ''}
+                        </div>
+                        <div class="mt-4 space-y-3">
+                            ${inputs.length ? `
+                                <div>
+                                    <span class="font-medium">Inputs:</span>
+                                    ${inputs.map(i => `<span class="tag">${i}</span>`).join(' ')}
+                                </div>` : ''}
+                            ${outputs.length ? `
+                                <div>
+                                    <span class="font-medium">Outputs:</span>
+                                    ${outputs.map(o => `<span class="tag">${o}</span>`).join(' ')}
+                                </div>` : ''}
+                        </div>
+                        ${block.docstring ? `
+                            <div class="mt-4">
+                                <span class="font-medium">Documentation:</span>
+                                <pre class="mt-2 p-4 rounded-lg bg-gray-50 dark:bg-gray-700 
+                                          text-sm font-mono overflow-x-auto">${block.docstring}</pre>
+                            </div>` : ''}
+                    `;
+                    container.appendChild(div);
+                });
+
+                searchInput.addEventListener('input', (e) => {
+                    const searchTerm = e.target.value.toLowerCase();
+                    let visibleCount = 0;
+
+                    document.querySelectorAll('.nodeblock').forEach(block => {
+                        const text = block.textContent.toLowerCase();
+                        if (text.includes(searchTerm)) {
+                            block.classList.remove('hidden');
+                            visibleCount++;
+                        } else {
+                            block.classList.add('hidden');
+                        }
+                    });
+
+                    updateCount(visibleCount);
+                });
+
+                updateCount(data.length);
+            });
+    </script>
+</body>
+</html>
