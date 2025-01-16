@@ -39,7 +39,7 @@ jobs:
       - name: Create docs directory
         run: |
           mkdir -p docs
-          cp nodeblock_index.html docs/
+          cp nodeblock_index.html docs/index.html
           cp nodeblock_index.json docs/
 
       - name: Upload artifact
