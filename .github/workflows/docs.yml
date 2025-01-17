@@ -41,7 +41,7 @@ jobs:
           mkdir -p docs
           touch docs/.nojekyll
           cp nodeblock_index.html docs/index.html
-          cp nodeblock_*.json docs/
+          cp nodeblock_* docs/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
