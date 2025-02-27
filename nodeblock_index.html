@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -49,6 +50,7 @@
         }
     </style>
 </head>
+
 <body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 min-h-screen">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <!-- Header -->
@@ -57,14 +59,14 @@
             <button id="theme-toggle" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700">
                 <!-- Sun icon -->
                 <svg class="w-6 h-6 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                          d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
                     </path>
                 </svg>
                 <!-- Moon icon -->
                 <svg class="w-6 h-6 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                          d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z">
                     </path>
                 </svg>
             </button>
@@ -73,8 +75,7 @@
         <!-- Search Controls -->
         <div class="sticky top-0 z-10 bg-gray-50 dark:bg-gray-900 py-4 mb-8 border-b dark:border-gray-700">
             <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-                <input type="text" id="search" placeholder="Search nodeblocks..." 
-                       class="search-input">
+                <input type="text" id="search" placeholder="Search nodeblocks..." class="search-input">
                 <span id="count" class="text-sm text-gray-600 dark:text-gray-400 font-medium"></span>
             </div>
         </div>
@@ -90,9 +91,9 @@
 
         // Theme Toggle
         const themeToggle = document.getElementById('theme-toggle');
-        const theme = localStorage.getItem('theme') || 
-                     (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-        
+        const theme = localStorage.getItem('theme') ||
+            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
         function updateTheme(theme) {
             if (theme === 'dark') {
                 document.documentElement.classList.add('dark');
@@ -117,13 +118,13 @@
             return `https://github.com/${GITHUB_REPO}/blob/${GITHUB_HASH}/${filePath}`;
         }
 
-        fetch('nodeblock_index.json')
+        fetch('nodeblock_index_ext.json')
             .then(response => response.json())
             .then(data => {
                 const container = document.getElementById('nodeblocks');
                 const searchInput = document.getElementById('search');
                 const countSpan = document.getElementById('count');
-                
+
                 function updateCount(visible) {
                     countSpan.textContent = `Showing ${visible} of ${data.length} nodeblocks`;
                 }
@@ -131,14 +132,31 @@
                 data.forEach(block => {
                     const div = document.createElement('div');
                     div.className = 'nodeblock';
-                    
-                    let inputs = Array.isArray(block.decorator_args.inputs) ? 
+
+                    let inputs = Array.isArray(block.decorator_args.inputs) ?
                         block.decorator_args.inputs.flat() : [];
-                    let outputs = Array.isArray(block.decorator_args.outputs) ? 
+                    let outputs = Array.isArray(block.decorator_args.outputs) ?
                         block.decorator_args.outputs.flat() : [];
 
                     const githubUrl = getGithubUrl(block.file, block.line_number);
                     const githubFileUrl = getGithubBlobUrl(block.file);
+
+                    function betterHash(str) {
+                        const PHI = 0.618033988749895;
+                        let hash = 0;
+                        for (let i = 0; i < str.length; i++) {
+                            hash += str.charCodeAt(i);
+                        }
+                        return (hash * PHI) % 1;
+                    }
+
+                    function stringToColor(str) {
+                        const hue = Math.floor(betterHash(str) * 360);
+                        return {
+                            light: `hsl(${hue}, 70%, 90%)`,
+                            dark: `hsl(${hue}, 70%, 20%)`
+                        };
+                    }
 
                     div.innerHTML = `
                         <div class="flex justify-between items-start mb-4">
@@ -155,6 +173,15 @@
                                 target="_blank">${block.file}:${block.line_number}</a>
                         </div>
                         <div class="space-y-3">
+                            ${block.workflows ? `
+  <div>
+    <span class="font-medium">Workflows:</span>
+    ${block.workflows.map(workflow_name => {
+                        const colors = stringToColor(workflow_name);
+                        return `<span class="tag rounded-full px-2.5 py-0.5 text-gray-100 text-sm transition-colors duration-150" 
+        style="background-color: ${colors.dark}">${workflow_name}</span>`;
+                    }).join(' ')}
+  </div>` : ''}
                             ${block.decorator_args.config ? `
                                 <div>
                                     <span class="font-medium">Config:</span>
@@ -163,11 +190,11 @@
                             ${block.decorator_args.switch ? `
                                 <div>
                                     <span class="font-medium">Switch:</span>
-                                    ${Array.isArray(block.decorator_args.switch[0]) 
-                                        ? block.decorator_args.switch.map(path => 
-                                            `<span class="tag">${path.join(' → ')}</span>`
-                                          ).join(' AND ')
-                                        : `<span class="tag">${block.decorator_args.switch.join(' → ')}</span>`}
+                                    ${Array.isArray(block.decorator_args.switch[0])
+                                ? block.decorator_args.switch.map(path =>
+                                    `<span class="tag">${path.join(' → ')}</span>`
+                                ).join(' AND ')
+                                : `<span class="tag">${block.decorator_args.switch.join(' → ')}</span>`}
                                 </div>` : ''}
                         </div>
                         <div class="mt-4 space-y-3">
@@ -213,4 +240,5 @@
             });
     </script>
 </body>
+
 </html>
