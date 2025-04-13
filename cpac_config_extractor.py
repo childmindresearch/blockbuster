@@ -117,11 +117,11 @@ if __name__ == "__main__":
 
         configs[config_path.stem] = config
 
-    def _any_true_in_config(config, multi_index_union):  
+    def _all_true_in_config(config, multi_index_union):  
         for path in paths:
-            if multi_get(config, path):
-                return True
-        return False
+            if not multi_get(config, path):
+                return False
+        return True
 
     for nb in nbs:
         nb_configs = normalize_index_union(nb["decorator_args"].get("config"))
@@ -145,7 +145,7 @@ if __name__ == "__main__":
 
         configs_with_this_enabled = []
         for config_name, config in configs.items():
-            if _any_true_in_config(config, paths):
+            if _all_true_in_config(config, paths):
                 configs_with_this_enabled.append(config_name)
 
         nb['workflows'] = configs_with_this_enabled

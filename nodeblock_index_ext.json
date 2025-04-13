@@ -168,24 +168,9 @@
     "workflows": [
       "abcd-options",
       "abcd-prep",
-      "anat-only",
-      "benchmark-ants",
-      "benchmark-fnirt",
-      "ccs-options",
-      "default-deprecated",
-      "default",
-      "fmriprep-options",
-      "fx-options",
       "monkey-abcd",
       "monkey",
-      "ndmg",
-      "nhp-macaque",
-      "preproc",
-      "rbc-options",
-      "regtest-1",
-      "regtest-2",
-      "regtest-3",
-      "regtest-4"
+      "nhp-macaque"
     ]
   },
   {
@@ -232,24 +217,9 @@
     "workflows": [
       "abcd-options",
       "abcd-prep",
-      "anat-only",
-      "benchmark-ants",
-      "benchmark-fnirt",
-      "ccs-options",
-      "default-deprecated",
-      "default",
-      "fmriprep-options",
-      "fx-options",
       "monkey-abcd",
       "monkey",
-      "ndmg",
-      "nhp-macaque",
-      "preproc",
-      "rbc-options",
-      "regtest-1",
-      "regtest-2",
-      "regtest-3",
-      "regtest-4"
+      "nhp-macaque"
     ]
   },
   {
@@ -288,24 +258,9 @@
     "workflows": [
       "abcd-options",
       "abcd-prep",
-      "anat-only",
-      "benchmark-ants",
-      "benchmark-fnirt",
-      "ccs-options",
-      "default-deprecated",
-      "default",
-      "fmriprep-options",
-      "fx-options",
       "monkey-abcd",
       "monkey",
-      "ndmg",
-      "nhp-macaque",
-      "preproc",
-      "rbc-options",
-      "regtest-1",
-      "regtest-2",
-      "regtest-3",
-      "regtest-4"
+      "nhp-macaque"
     ]
   },
   {
@@ -346,24 +301,9 @@
     "workflows": [
       "abcd-options",
       "abcd-prep",
-      "anat-only",
-      "benchmark-ants",
-      "benchmark-fnirt",
-      "ccs-options",
-      "default-deprecated",
-      "default",
-      "fmriprep-options",
-      "fx-options",
       "monkey-abcd",
       "monkey",
-      "ndmg",
-      "nhp-macaque",
-      "preproc",
-      "rbc-options",
-      "regtest-1",
-      "regtest-2",
-      "regtest-3",
-      "regtest-4"
+      "nhp-macaque"
     ]
   },
   {
@@ -428,11 +368,9 @@
       "anat-only",
       "benchmark-ants",
       "benchmark-fnirt",
-      "blank",
       "ccs-options",
       "default-deprecated",
       "default",
-      "fmriprep-ingress",
       "fmriprep-options",
       "fx-options",
       "monkey-abcd",
@@ -444,8 +382,7 @@
       "regtest-1",
       "regtest-2",
       "regtest-3",
-      "regtest-4",
-      "rodent"
+      "regtest-4"
     ]
   },
   {
@@ -478,11 +415,9 @@
       "anat-only",
       "benchmark-ants",
       "benchmark-fnirt",
-      "blank",
       "ccs-options",
       "default-deprecated",
       "default",
-      "fmriprep-ingress",
       "fmriprep-options",
       "fx-options",
       "monkey-abcd",
@@ -494,8 +429,7 @@
       "regtest-1",
       "regtest-2",
       "regtest-3",
-      "regtest-4",
-      "rodent"
+      "regtest-4"
     ]
   },
   {
@@ -566,7 +500,6 @@
     "source_code": "def brain_mask_afni(wf, cfg, strat_pool, pipe_num, opt=None):\n    wf, outputs = afni_brain_connector(wf, cfg, strat_pool, pipe_num, opt)\n\n    return (wf, outputs)",
     "workflows": [
       "abcd-options",
-      "abcd-prep",
       "anat-only",
       "benchmark-ants",
       "benchmark-fnirt",
@@ -584,8 +517,7 @@
       "regtest-1",
       "regtest-2",
       "regtest-3",
-      "regtest-4",
-      "rodent"
+      "regtest-4"
     ]
   },
   {
@@ -622,7 +554,6 @@
     "source_code": "def brain_mask_acpc_afni(wf, cfg, strat_pool, pipe_num, opt=None):\n    wf, wf_outputs = afni_brain_connector(wf, cfg, strat_pool, pipe_num, opt)\n\n    outputs = {\"space-T1w_desc-acpcbrain_mask\": wf_outputs[\"space-T1w_desc-brain_mask\"]}\n\n    return (wf, outputs)",
     "workflows": [
       "abcd-options",
-      "abcd-prep",
       "anat-only",
       "benchmark-ants",
       "benchmark-fnirt",
@@ -640,8 +571,7 @@
       "regtest-1",
       "regtest-2",
       "regtest-3",
-      "regtest-4",
-      "rodent"
+      "regtest-4"
     ]
   },
   {
@@ -678,7 +608,6 @@
     "source_code": "def brain_mask_fsl(wf, cfg, strat_pool, pipe_num, opt=None):\n    wf, outputs = fsl_brain_connector(wf, cfg, strat_pool, pipe_num, opt)\n\n    return (wf, outputs)",
     "workflows": [
       "abcd-options",
-      "abcd-prep",
       "anat-only",
       "benchmark-ants",
       "benchmark-fnirt",
@@ -696,8 +625,7 @@
       "regtest-1",
       "regtest-2",
       "regtest-3",
-      "regtest-4",
-      "rodent"
+      "regtest-4"
     ]
   },
   {
@@ -734,7 +662,6 @@
     "source_code": "def brain_mask_acpc_fsl(wf, cfg, strat_pool, pipe_num, opt=None):\n    wf, wf_outputs = fsl_brain_connector(wf, cfg, strat_pool, pipe_num, opt)\n\n    outputs = {\"space-T1w_desc-acpcbrain_mask\": wf_outputs[\"space-T1w_desc-brain_mask\"]}\n\n    return (wf, outputs)",
     "workflows": [
       "abcd-options",
-      "abcd-prep",
       "anat-only",
       "benchmark-ants",
       "benchmark-fnirt",
@@ -752,8 +679,7 @@
       "regtest-1",
       "regtest-2",
       "regtest-3",
-      "regtest-4",
-      "rodent"
+      "regtest-4"
     ]
   },
   {
@@ -791,7 +717,6 @@
     "source_code": "def brain_mask_niworkflows_ants(wf, cfg, strat_pool, pipe_num, opt=None):\n    wf, outputs = niworkflows_ants_brain_connector(wf, cfg, strat_pool, pipe_num, opt)\n\n    return (wf, outputs)",
     "workflows": [
       "abcd-options",
-      "abcd-prep",
       "anat-only",
       "benchmark-ants",
       "benchmark-fnirt",
@@ -809,8 +734,7 @@
       "regtest-1",
       "regtest-2",
       "regtest-3",
-      "regtest-4",
-      "rodent"
+      "regtest-4"
     ]
   },
   {
@@ -848,7 +772,6 @@
     "source_code": "def brain_mask_acpc_niworkflows_ants(wf, cfg, strat_pool, pipe_num, opt=None):\n    wf, wf_outputs = niworkflows_ants_brain_connector(\n        wf, cfg, strat_pool, pipe_num, opt\n    )\n\n    outputs = {\n        \"space-T1w_desc-acpcbrain_mask\": wf_outputs[\"space-T1w_desc-brain_mask\"],\n        \"desc-preproc_T1w\": wf_outputs[\"desc-preproc_T1w\"],\n    }\n\n    return (wf, outputs)",
     "workflows": [
       "abcd-options",
-      "abcd-prep",
       "anat-only",
       "benchmark-ants",
       "benchmark-fnirt",
@@ -866,8 +789,7 @@
       "regtest-1",
       "regtest-2",
       "regtest-3",
-      "regtest-4",
-      "rodent"
+      "regtest-4"
     ]
   },
   {
@@ -907,7 +829,6 @@
     "source_code": "def brain_mask_unet(wf, cfg, strat_pool, pipe_num, opt=None):\n    wf, outputs = unet_brain_connector(wf, cfg, strat_pool, pipe_num, opt)\n\n    return (wf, outputs)",
     "workflows": [
       "abcd-options",
-      "abcd-prep",
       "anat-only",
       "benchmark-ants",
       "benchmark-fnirt",
@@ -925,8 +846,7 @@
       "regtest-1",
       "regtest-2",
       "regtest-3",
-      "regtest-4",
-      "rodent"
+      "regtest-4"
     ]
   },
   {
@@ -966,7 +886,6 @@
     "source_code": "def brain_mask_acpc_unet(wf, cfg, strat_pool, pipe_num, opt=None):\n    wf, wf_outputs = unet_brain_connector(wf, cfg, strat_pool, pipe_num, opt)\n\n    outputs = {\"space-T1w_desc-acpcbrain_mask\": wf_outputs[\"space-T1w_desc-brain_mask\"]}\n\n    return (wf, outputs)",
     "workflows": [
       "abcd-options",
-      "abcd-prep",
       "anat-only",
       "benchmark-ants",
       "benchmark-fnirt",
@@ -984,8 +903,7 @@
       "regtest-1",
       "regtest-2",
       "regtest-3",
-      "regtest-4",
-      "rodent"
+      "regtest-4"
     ]
   },
   {
@@ -1024,7 +942,6 @@
     "source_code": "def brain_mask_freesurfer(wf, cfg, strat_pool, pipe_num, opt=None):\n    wf, outputs = freesurfer_brain_connector(wf, cfg, strat_pool, pipe_num, opt)\n\n    return (wf, outputs)",
     "workflows": [
       "abcd-options",
-      "abcd-prep",
       "anat-only",
       "benchmark-ants",
       "benchmark-fnirt",
@@ -1042,8 +959,7 @@
       "regtest-1",
       "regtest-2",
       "regtest-3",
-      "regtest-4",
-      "rodent"
+      "regtest-4"
     ]
   },
   {
@@ -1082,7 +998,6 @@
     "source_code": "def brain_mask_acpc_freesurfer(wf, cfg, strat_pool, pipe_num, opt=None):\n    wf, wf_outputs = freesurfer_brain_connector(wf, cfg, strat_pool, pipe_num, opt)\n\n    outputs = {\"space-T1w_desc-acpcbrain_mask\": wf_outputs[\"space-T1w_desc-brain_mask\"]}\n\n    return (wf, outputs)",
     "workflows": [
       "abcd-options",
-      "abcd-prep",
       "anat-only",
       "benchmark-ants",
       "benchmark-fnirt",
@@ -1100,8 +1015,7 @@
       "regtest-1",
       "regtest-2",
       "regtest-3",
-      "regtest-4",
-      "rodent"
+      "regtest-4"
     ]
   },
   {
@@ -1142,7 +1056,6 @@
     "source_code": "def brain_mask_freesurfer_abcd(wf, cfg, strat_pool, pipe_num, opt=None):\n    wf, outputs = freesurfer_abcd_brain_connector(wf, cfg, strat_pool, pipe_num, opt)\n\n    return (wf, outputs)",
     "workflows": [
       "abcd-options",
-      "abcd-prep",
       "anat-only",
       "benchmark-ants",
       "benchmark-fnirt",
@@ -1160,8 +1073,7 @@
       "regtest-1",
       "regtest-2",
       "regtest-3",
-      "regtest-4",
-      "rodent"
+      "regtest-4"
     ]
   },
   {
@@ -1203,7 +1115,6 @@
     "source_code": "def brain_mask_freesurfer_fsl_tight(wf, cfg, strat_pool, pipe_num, opt=None):\n    wf, outputs = freesurfer_fsl_brain_connector(wf, cfg, strat_pool, pipe_num, opt)\n\n    return (wf, outputs)",
     "workflows": [
       "abcd-options",
-      "abcd-prep",
       "anat-only",
       "benchmark-ants",
       "benchmark-fnirt",
@@ -1221,8 +1132,7 @@
       "regtest-1",
       "regtest-2",
       "regtest-3",
-      "regtest-4",
-      "rodent"
+      "regtest-4"
     ]
   },
   {
@@ -1263,7 +1173,6 @@
     "source_code": "def brain_mask_acpc_freesurfer_abcd(wf, cfg, strat_pool, pipe_num, opt=None):\n    wf, wf_outputs = freesurfer_abcd_brain_connector(wf, cfg, strat_pool, pipe_num, opt)\n\n    outputs = {\"space-T1w_desc-acpcbrain_mask\": wf_outputs[\"space-T1w_desc-brain_mask\"]}\n\n    return (wf, outputs)",
     "workflows": [
       "abcd-options",
-      "abcd-prep",
       "anat-only",
       "benchmark-ants",
       "benchmark-fnirt",
@@ -1281,8 +1190,7 @@
       "regtest-1",
       "regtest-2",
       "regtest-3",
-      "regtest-4",
-      "rodent"
+      "regtest-4"
     ]
   },
   {
@@ -1324,7 +1232,6 @@
     "source_code": "def brain_mask_freesurfer_fsl_loose(wf, cfg, strat_pool, pipe_num, opt=None):\n    wf, outputs = freesurfer_fsl_brain_connector(wf, cfg, strat_pool, pipe_num, opt)\n\n    return (wf, outputs)",
     "workflows": [
       "abcd-options",
-      "abcd-prep",
       "anat-only",
       "benchmark-ants",
       "benchmark-fnirt",
@@ -1342,8 +1249,7 @@
       "regtest-1",
       "regtest-2",
       "regtest-3",
-      "regtest-4",
-      "rodent"
+      "regtest-4"
     ]
   },
   {
@@ -1383,7 +1289,6 @@
     "source_code": "def brain_mask_acpc_freesurfer_fsl_tight(wf, cfg, strat_pool, pipe_num, opt=None):\n    wf, wf_outputs = freesurfer_fsl_brain_connector(wf, cfg, strat_pool, pipe_num, opt)\n\n    outputs = {\n        \"space-T1w_desc-tight_acpcbrain_mask\": wf_outputs[\n            \"space-T1w_desc-tight_brain_mask\"\n        ]\n    }\n\n    return (wf, outputs)",
     "workflows": [
       "abcd-options",
-      "abcd-prep",
       "anat-only",
       "benchmark-ants",
       "benchmark-fnirt",
@@ -1401,8 +1306,7 @@
       "regtest-1",
       "regtest-2",
       "regtest-3",
-      "regtest-4",
-      "rodent"
+      "regtest-4"
     ]
   },
   {
@@ -1442,7 +1346,6 @@
     "source_code": "def brain_mask_acpc_freesurfer_fsl_loose(wf, cfg, strat_pool, pipe_num, opt=None):\n    wf, wf_outputs = freesurfer_fsl_brain_connector(wf, cfg, strat_pool, pipe_num, opt)\n\n    outputs = {\n        \"space-T1w_desc-loose_acpcbrain_mask\": wf_outputs[\n            \"space-T1w_desc-loose_brain_mask\"\n        ]\n    }\n\n    return (wf, outputs)",
     "workflows": [
       "abcd-options",
-      "abcd-prep",
       "anat-only",
       "benchmark-ants",
       "benchmark-fnirt",
@@ -1460,8 +1363,7 @@
       "regtest-1",
       "regtest-2",
       "regtest-3",
-      "regtest-4",
-      "rodent"
+      "regtest-4"
     ]
   },
   {
@@ -1497,7 +1399,6 @@
     "source_code": "def brain_extraction(wf, cfg, strat_pool, pipe_num, opt=None):\n    \"\"\"\n    brain_mask_deoblique = pe.Node(interface=afni.Refit(),\n                                   name='brain_mask_deoblique')\n    brain_mask_deoblique.inputs.deoblique = True\n    wf.connect(inputnode, 'brain_mask',\n                    brain_mask_deoblique, 'in_file')\n\n    brain_mask_reorient = pe.Node(interface=afni.Resample(),\n                                  name='brain_mask_reorient',\n                                  mem_gb=0,\n                                  mem_x=(0.0115, 'in_file', 't'))\n    brain_mask_reorient.inputs.orientation = 'RPI'\n    brain_mask_reorient.inputs.outputtype = 'NIFTI_GZ'\n    wf.connect(brain_mask_deoblique, 'out_file',\n                    brain_mask_reorient, 'in_file')\n    \"\"\"\n    anat_skullstrip_orig_vol = pe.Node(\n        interface=afni.Calc(), name=f\"brain_extraction_{pipe_num}\"\n    )\n\n    anat_skullstrip_orig_vol.inputs.expr = \"a*step(b)\"\n    anat_skullstrip_orig_vol.inputs.outputtype = \"NIFTI_GZ\"\n\n    node_T1w, out_T1w = strat_pool.get_data(\"desc-head_T1w\")\n    wf.connect(node_T1w, out_T1w, anat_skullstrip_orig_vol, \"in_file_a\")\n\n    node, out = strat_pool.get_data(\n        [\"space-T1w_desc-brain_mask\", \"space-T1w_desc-acpcbrain_mask\"]\n    )\n    wf.connect(node, out, anat_skullstrip_orig_vol, \"in_file_b\")\n\n    outputs = {\n        \"desc-preproc_T1w\": (anat_skullstrip_orig_vol, \"out_file\"),\n        \"desc-brain_T1w\": (anat_skullstrip_orig_vol, \"out_file\"),\n        \"desc-head_T1w\": (node_T1w, out_T1w),\n    }\n\n    return (wf, outputs)",
     "workflows": [
       "abcd-options",
-      "abcd-prep",
       "anat-only",
       "benchmark-ants",
       "benchmark-fnirt",
@@ -1515,8 +1416,7 @@
       "regtest-1",
       "regtest-2",
       "regtest-3",
-      "regtest-4",
-      "rodent"
+      "regtest-4"
     ]
   },
   {
@@ -1594,11 +1494,7 @@
     "docstring": null,
     "source_code": "def acpc_align_head_T2(wf, cfg, strat_pool, pipe_num, opt=None):\n    acpc_align = acpc_alignment(\n        config=cfg,\n        acpc_target=cfg.anatomical_preproc[\"acpc_alignment\"][\"acpc_target\"],\n        mask=False,\n        wf_name=f\"acpc_align_T2_{pipe_num}\",\n    )\n\n    node, out = strat_pool.get_data(\"desc-preproc_T2w\")\n    wf.connect(node, out, acpc_align, \"inputspec.anat_leaf\")\n\n    node, out = strat_pool.get_data(\"T2w-ACPC-template\")\n    wf.connect(node, out, acpc_align, \"inputspec.template_head_for_acpc\")\n\n    outputs = {\"desc-preproc_T2w\": (acpc_align, \"outputspec.acpc_aligned_head\")}\n\n    return (wf, outputs)",
     "workflows": [
-      "abcd-options",
-      "abcd-prep",
-      "monkey-abcd",
-      "monkey",
-      "nhp-macaque"
+      "monkey-abcd"
     ]
   },
   {
@@ -1633,11 +1529,7 @@
     "docstring": null,
     "source_code": "def acpc_align_head_with_mask_T2(wf, cfg, strat_pool, pipe_num, opt=None):\n    acpc_align = acpc_alignment(\n        config=cfg,\n        acpc_target=cfg.anatomical_preproc[\"acpc_alignment\"][\"acpc_target\"],\n        mask=True,\n        wf_name=f\"acpc_align_T2_{pipe_num}\",\n    )\n\n    node, out = strat_pool.get_data(\"desc-preproc_T2w\")\n    wf.connect(node, out, acpc_align, \"inputspec.anat_leaf\")\n\n    node, out = strat_pool.get_data(\"T2w-ACPC-template\")\n    wf.connect(node, out, acpc_align, \"inputspec.template_head_for_acpc\")\n\n    outputs = {\n        \"desc-preproc_T2w\": (acpc_align, \"outputspec.acpc_aligned_head\"),\n        \"space-T2w_desc-brain_mask\": (acpc_align, \"outputspec.acpc_brain_mask\"),\n    }\n\n    return (wf, outputs)",
     "workflows": [
-      "abcd-options",
-      "abcd-prep",
-      "monkey-abcd",
-      "monkey",
-      "nhp-macaque"
+      "monkey-abcd"
     ]
   },
   {
@@ -1673,11 +1565,7 @@
     "docstring": null,
     "source_code": "def acpc_align_brain_T2(wf, cfg, strat_pool, pipe_num, opt=None):\n    acpc_align = acpc_alignment(\n        config=cfg,\n        acpc_target=cfg.anatomical_preproc[\"acpc_alignment\"][\"acpc_target\"],\n        mask=False,\n        wf_name=f\"acpc_align_T2_{pipe_num}\",\n    )\n\n    node, out = strat_pool.get_data(\"desc-preproc_T2w\")\n    wf.connect(node, out, acpc_align, \"inputspec.anat_leaf\")\n\n    node, out = strat_pool.get_data(\"desc-tempbrain_T2w\")\n    wf.connect(node, out, acpc_align, \"inputspec.anat_brain\")\n\n    node, out = strat_pool.get_data(\"T2w-ACPC-template\")\n    wf.connect(node, out, acpc_align, \"inputspec.template_head_for_acpc\")\n\n    node, out = strat_pool.get_data(\"T2w-brain-ACPC-template\")\n    wf.connect(node, out, acpc_align, \"inputspec.template_brain_for_acpc\")\n\n    outputs = {\n        \"desc-preproc_T2w\": (acpc_align, \"outputspec.acpc_aligned_head\"),\n        \"desc-acpcbrain_T2w\": (acpc_align, \"outputspec.acpc_aligned_brain\"),\n    }\n\n    return (wf, outputs)",
     "workflows": [
-      "abcd-options",
-      "abcd-prep",
-      "monkey-abcd",
-      "monkey",
-      "nhp-macaque"
+      "monkey-abcd"
     ]
   },
   {
@@ -1715,11 +1603,7 @@
     "docstring": null,
     "source_code": "def acpc_align_brain_with_mask_T2(wf, cfg, strat_pool, pipe_num, opt=None):\n    acpc_align = acpc_alignment(\n        config=cfg,\n        acpc_target=cfg.anatomical_preproc[\"acpc_alignment\"][\"acpc_target\"],\n        mask=True,\n        wf_name=f\"acpc_align_T2_{pipe_num}\",\n    )\n\n    node, out = strat_pool.get_data(\"desc-preproc_T2w\")\n    wf.connect(node, out, acpc_align, \"inputspec.anat_leaf\")\n\n    node, out = strat_pool.get_data(\"desc-tempbrain_T2w\")\n    wf.connect(node, out, acpc_align, \"inputspec.anat_brain\")\n\n    node, out = strat_pool.get_data(\"space-T2w_desc-brain_mask\")\n    wf.connect(node, out, acpc_align, \"inputspec.brain_mask\")\n\n    node, out = strat_pool.get_data(\"T2w-ACPC-template\")\n    wf.connect(node, out, acpc_align, \"inputspec.template_head_for_acpc\")\n\n    node, out = strat_pool.get_data(\"T2w-brain-ACPC-template\")\n    wf.connect(node, out, acpc_align, \"inputspec.template_brain_for_acpc\")\n\n    outputs = {\n        \"desc-preproc_T2w\": (acpc_align, \"outputspec.acpc_aligned_head\"),\n        \"desc-acpcbrain_T2w\": (acpc_align, \"outputspec.acpc_aligned_brain\"),\n        \"space-T2w_desc-brain_mask\": (acpc_align, \"outputspec.acpc_brain_mask\"),\n    }\n\n    return (wf, outputs)",
     "workflows": [
-      "abcd-options",
-      "abcd-prep",
-      "monkey-abcd",
-      "monkey",
-      "nhp-macaque"
+      "monkey-abcd"
     ]
   },
   {
@@ -1749,29 +1633,7 @@
     "docstring": null,
     "source_code": "def non_local_means_T2(wf, cfg, strat_pool, pipe_num, opt=None):\n    denoise = pe.Node(interface=ants.DenoiseImage(), name=f\"anat_denoise_T2_{pipe_num}\")\n\n    node, out = strat_pool.get_data(\"desc-preproc_T2w\")\n    wf.connect(node, out, denoise, \"input_image\")\n\n    outputs = {\"desc-preproc_T2w\": (denoise, \"output_image\")}\n\n    return (wf, outputs)",
     "workflows": [
-      "abcd-options",
-      "abcd-prep",
-      "anat-only",
-      "benchmark-ants",
-      "benchmark-fnirt",
-      "blank",
-      "ccs-options",
-      "default-deprecated",
-      "default",
-      "fmriprep-ingress",
-      "fmriprep-options",
-      "fx-options",
-      "monkey-abcd",
-      "monkey",
-      "ndmg",
-      "nhp-macaque",
-      "preproc",
-      "rbc-options",
-      "regtest-1",
-      "regtest-2",
-      "regtest-3",
-      "regtest-4",
-      "rodent"
+      "monkey-abcd"
     ]
   },
   {
@@ -1801,6 +1663,31 @@
     "docstring": null,
     "source_code": "def n4_bias_correction_T2(wf, cfg, strat_pool, pipe_num, opt=None):\n    n4 = pe.Node(\n        interface=ants.N4BiasFieldCorrection(\n            dimension=3, shrink_factor=2, copy_header=True\n        ),\n        name=f\"anat_n4_T2_{pipe_num}\",\n    )\n\n    node, out = strat_pool.get_data(\"desc-preproc_T2w\")\n    wf.connect(node, out, n4, \"input_image\")\n\n    outputs = {\"desc-preproc_T2w\": (n4, \"output_image\")}\n\n    return (wf, outputs)",
     "workflows": [
+      "monkey-abcd"
+    ]
+  },
+  {
+    "name": "brain_mask_afni_T2",
+    "file": "CPAC/anat_preproc/anat_preproc.py",
+    "line_number": 2486,
+    "decorator_args": {
+      "name": "brain_mask_afni_T2",
+      "config": [
+        "anatomical_preproc",
+        "brain_extraction"
+      ],
+      "option_key": "using",
+      "option_val": "3dSkullStrip",
+      "inputs": [
+        "desc-preproc_T2w"
+      ],
+      "outputs": [
+        "space-T2w_desc-brain_mask"
+      ]
+    },
+    "docstring": null,
+    "source_code": "def brain_mask_afni_T2(wf, cfg, strat_pool, pipe_num, opt=None):\n    wf, outputs = afni_brain_connector(wf, cfg, strat_pool, pipe_num, opt)\n\n    return (wf, outputs)",
+    "workflows": [
       "abcd-options",
       "abcd-prep",
       "anat-only",
@@ -1827,29 +1714,6 @@
     ]
   },
   {
-    "name": "brain_mask_afni_T2",
-    "file": "CPAC/anat_preproc/anat_preproc.py",
-    "line_number": 2486,
-    "decorator_args": {
-      "name": "brain_mask_afni_T2",
-      "config": [
-        "anatomical_preproc",
-        "brain_extraction"
-      ],
-      "option_key": "using",
-      "option_val": "3dSkullStrip",
-      "inputs": [
-        "desc-preproc_T2w"
-      ],
-      "outputs": [
-        "space-T2w_desc-brain_mask"
-      ]
-    },
-    "docstring": null,
-    "source_code": "def brain_mask_afni_T2(wf, cfg, strat_pool, pipe_num, opt=None):\n    wf, outputs = afni_brain_connector(wf, cfg, strat_pool, pipe_num, opt)\n\n    return (wf, outputs)",
-    "workflows": []
-  },
-  {
     "name": "brain_mask_acpc_afni_T2",
     "file": "CPAC/anat_preproc/anat_preproc.py",
     "line_number": 2500,
@@ -1870,7 +1734,31 @@
     },
     "docstring": null,
     "source_code": "def brain_mask_acpc_afni_T2(wf, cfg, strat_pool, pipe_num, opt=None):\n    wf, wf_outputs = afni_brain_connector(wf, cfg, strat_pool, pipe_num, opt)\n\n    outputs = {\"space-T2w_desc-acpcbrain_mask\": wf_outputs[\"space-T2w_desc-brain_mask\"]}\n\n    return (wf, outputs)",
-    "workflows": []
+    "workflows": [
+      "abcd-options",
+      "abcd-prep",
+      "anat-only",
+      "benchmark-ants",
+      "benchmark-fnirt",
+      "blank",
+      "ccs-options",
+      "default-deprecated",
+      "default",
+      "fmriprep-ingress",
+      "fmriprep-options",
+      "fx-options",
+      "monkey-abcd",
+      "monkey",
+      "ndmg",
+      "nhp-macaque",
+      "preproc",
+      "rbc-options",
+      "regtest-1",
+      "regtest-2",
+      "regtest-3",
+      "regtest-4",
+      "rodent"
+    ]
   },
   {
     "name": "brain_mask_fsl_T2",
@@ -1893,7 +1781,31 @@
     },
     "docstring": null,
     "source_code": "def brain_mask_fsl_T2(wf, cfg, strat_pool, pipe_num, opt=None):\n    wf, outputs = fsl_brain_connector(wf, cfg, strat_pool, pipe_num, opt)\n\n    return (wf, outputs)",
-    "workflows": []
+    "workflows": [
+      "abcd-options",
+      "abcd-prep",
+      "anat-only",
+      "benchmark-ants",
+      "benchmark-fnirt",
+      "blank",
+      "ccs-options",
+      "default-deprecated",
+      "default",
+      "fmriprep-ingress",
+      "fmriprep-options",
+      "fx-options",
+      "monkey-abcd",
+      "monkey",
+      "ndmg",
+      "nhp-macaque",
+      "preproc",
+      "rbc-options",
+      "regtest-1",
+      "regtest-2",
+      "regtest-3",
+      "regtest-4",
+      "rodent"
+    ]
   },
   {
     "name": "brain_mask_acpc_fsl_T2",
@@ -1916,7 +1828,31 @@
     },
     "docstring": null,
     "source_code": "def brain_mask_acpc_fsl_T2(wf, cfg, strat_pool, pipe_num, opt=None):\n    wf, wf_outputs = fsl_brain_connector(wf, cfg, strat_pool, pipe_num, opt)\n\n    outputs = {\"space-T2w_desc-acpcbrain_mask\": wf_outputs[\"space-T2w_desc-brain_mask\"]}\n\n    return (wf, outputs)",
-    "workflows": []
+    "workflows": [
+      "abcd-options",
+      "abcd-prep",
+      "anat-only",
+      "benchmark-ants",
+      "benchmark-fnirt",
+      "blank",
+      "ccs-options",
+      "default-deprecated",
+      "default",
+      "fmriprep-ingress",
+      "fmriprep-options",
+      "fx-options",
+      "monkey-abcd",
+      "monkey",
+      "ndmg",
+      "nhp-macaque",
+      "preproc",
+      "rbc-options",
+      "regtest-1",
+      "regtest-2",
+      "regtest-3",
+      "regtest-4",
+      "rodent"
+    ]
   },
   {
     "name": "brain_mask_niworkflows_ants_T2",
@@ -1939,7 +1875,31 @@
     },
     "docstring": null,
     "source_code": "def brain_mask_niworkflows_ants_T2(wf, cfg, strat_pool, pipe_num, opt=None):\n    wf, outputs = niworkflows_ants_brain_connector(wf, cfg, strat_pool, pipe_num, opt)\n\n    return (wf, outputs)",
-    "workflows": []
+    "workflows": [
+      "abcd-options",
+      "abcd-prep",
+      "anat-only",
+      "benchmark-ants",
+      "benchmark-fnirt",
+      "blank",
+      "ccs-options",
+      "default-deprecated",
+      "default",
+      "fmriprep-ingress",
+      "fmriprep-options",
+      "fx-options",
+      "monkey-abcd",
+      "monkey",
+      "ndmg",
+      "nhp-macaque",
+      "preproc",
+      "rbc-options",
+      "regtest-1",
+      "regtest-2",
+      "regtest-3",
+      "regtest-4",
+      "rodent"
+    ]
   },
   {
     "name": "brain_mask_acpc_niworkflows_ants_T2",
@@ -1962,7 +1922,31 @@
     },
     "docstring": null,
     "source_code": "def brain_mask_acpc_niworkflows_ants_T2(wf, cfg, strat_pool, pipe_num, opt=None):\n    wf, wf_outputs = niworkflows_ants_brain_connector(\n        wf, cfg, strat_pool, pipe_num, opt\n    )\n\n    outputs = {\"space-T2w_desc-acpcbrain_mask\": wf_outputs[\"space-T2w_desc-brain_mask\"]}\n\n    return (wf, outputs)",
-    "workflows": []
+    "workflows": [
+      "abcd-options",
+      "abcd-prep",
+      "anat-only",
+      "benchmark-ants",
+      "benchmark-fnirt",
+      "blank",
+      "ccs-options",
+      "default-deprecated",
+      "default",
+      "fmriprep-ingress",
+      "fmriprep-options",
+      "fx-options",
+      "monkey-abcd",
+      "monkey",
+      "ndmg",
+      "nhp-macaque",
+      "preproc",
+      "rbc-options",
+      "regtest-1",
+      "regtest-2",
+      "regtest-3",
+      "regtest-4",
+      "rodent"
+    ]
   },
   {
     "name": "brain_mask_unet_T2",
@@ -1988,7 +1972,31 @@
     },
     "docstring": null,
     "source_code": "def brain_mask_unet_T2(wf, cfg, strat_pool, pipe_num, opt=None):\n    wf, outputs = unet_brain_connector(wf, cfg, strat_pool, pipe_num, opt)\n\n    return (wf, outputs)",
-    "workflows": []
+    "workflows": [
+      "abcd-options",
+      "abcd-prep",
+      "anat-only",
+      "benchmark-ants",
+      "benchmark-fnirt",
+      "blank",
+      "ccs-options",
+      "default-deprecated",
+      "default",
+      "fmriprep-ingress",
+      "fmriprep-options",
+      "fx-options",
+      "monkey-abcd",
+      "monkey",
+      "ndmg",
+      "nhp-macaque",
+      "preproc",
+      "rbc-options",
+      "regtest-1",
+      "regtest-2",
+      "regtest-3",
+      "regtest-4",
+      "rodent"
+    ]
   },
   {
     "name": "brain_mask_acpc_unet_T2",
@@ -2014,7 +2022,31 @@
     },
     "docstring": null,
     "source_code": "def brain_mask_acpc_unet_T2(wf, cfg, strat_pool, pipe_num, opt=None):\n    wf, wf_outputs = unet_brain_connector(wf, cfg, strat_pool, pipe_num, opt)\n\n    outputs = {\"space-T2w_desc-acpcbrain_mask\": wf_outputs[\"space-T2w_desc-brain_mask\"]}\n\n    return (wf, outputs)",
-    "workflows": []
+    "workflows": [
+      "abcd-options",
+      "abcd-prep",
+      "anat-only",
+      "benchmark-ants",
+      "benchmark-fnirt",
+      "blank",
+      "ccs-options",
+      "default-deprecated",
+      "default",
+      "fmriprep-ingress",
+      "fmriprep-options",
+      "fx-options",
+      "monkey-abcd",
+      "monkey",
+      "ndmg",
+      "nhp-macaque",
+      "preproc",
+      "rbc-options",
+      "regtest-1",
+      "regtest-2",
+      "regtest-3",
+      "regtest-4",
+      "rodent"
+    ]
   },
   {
     "name": "brain_mask_T2",
@@ -2268,7 +2300,31 @@
     },
     "docstring": null,
     "source_code": "def correct_restore_brain_intensity_abcd(wf, cfg, strat_pool, pipe_num, opt=None):\n    ### ABCD Harmonization - Myelin Map ###\n    # Ref: https://github.com/DCAN-Labs/DCAN-HCP/blob/9291324/PreFreeSurfer/PreFreeSurferPipeline.sh#L655-L656\n    # fslmerge -t ${T1wFolder}/xfms/${T1wImage}_dc ${T1wFolder}/${T1wImage}_acpc ${T1wFolder}/${T1wImage}_acpc ${T1wFolder}/${T1wImage}_acpc\n    merge_t1_acpc_to_list = pe.Node(\n        util.Merge(3), name=f\"merge_t1_acpc_to_list_{pipe_num}\"\n    )\n\n    node, out = strat_pool.get_data(\"desc-preproc_T1w\")\n    wf.connect(node, out, merge_t1_acpc_to_list, \"in1\")\n    wf.connect(node, out, merge_t1_acpc_to_list, \"in2\")\n    wf.connect(node, out, merge_t1_acpc_to_list, \"in3\")\n\n    merge_t1_acpc = pe.Node(interface=fslMerge(), name=f\"merge_t1_acpc_{pipe_num}\")\n\n    merge_t1_acpc.inputs.dimension = \"t\"\n\n    wf.connect(merge_t1_acpc_to_list, \"out\", merge_t1_acpc, \"in_files\")\n\n    # fslmaths ${T1wFolder}/xfms/${T1wImage}_dc -mul 0 ${T1wFolder}/xfms/${T1wImage}_dc\n    multiply_t1_acpc_by_zero = pe.Node(\n        interface=fsl.ImageMaths(), name=f\"multiply_t1_acpc_by_zero_{pipe_num}\"\n    )\n\n    multiply_t1_acpc_by_zero.inputs.op_string = \"-mul 0\"\n\n    wf.connect(merge_t1_acpc, \"merged_file\", multiply_t1_acpc_by_zero, \"in_file\")\n\n    # Ref: https://github.com/DCAN-Labs/DCAN-HCP/blob/7927754/PostFreeSurfer/PostFreeSurferPipeline.sh#L157\n    # convertwarp --relout --rel --ref=\"$T1wFolder\"/\"$T1wImageBrainMask\" --premat=\"$T1wFolder\"/xfms/\"$InitialT1wTransform\" \\\n    # --warp1=\"$T1wFolder\"/xfms/\"$dcT1wTransform\" --out=\"$T1wFolder\"/xfms/\"$OutputOrigT1wToT1w\"\n    convertwarp_orig_t1_to_t1 = pe.Node(\n        interface=fsl.ConvertWarp(), name=f\"convertwarp_orig_t1_to_t1_{pipe_num}\"\n    )\n\n    convertwarp_orig_t1_to_t1.inputs.out_relwarp = True\n    convertwarp_orig_t1_to_t1.inputs.relwarp = True\n\n    node, out = strat_pool.get_data(\"space-T1w_desc-brain_mask\")\n    wf.connect(node, out, convertwarp_orig_t1_to_t1, \"reference\")\n\n    node, out = strat_pool.get_data(\"from-T1w_to-ACPC_mode-image_desc-aff2rig_xfm\")\n    wf.connect(node, out, convertwarp_orig_t1_to_t1, \"premat\")\n    wf.connect(multiply_t1_acpc_by_zero, \"out_file\", convertwarp_orig_t1_to_t1, \"warp1\")\n\n    # Ref: https://github.com/DCAN-Labs/DCAN-HCP/blob/a8d495a/PostFreeSurfer/scripts/CreateMyelinMaps.sh#L72-L73\n    # applywarp --rel --interp=spline -i \"$BiasField\" -r \"$T1wImageBrain\" -w \"$AtlasTransform\" -o \"$BiasFieldOutput\"\n    applywarp_biasfield = pe.Node(\n        interface=fsl.ApplyWarp(), name=f\"applywarp_biasfield_{pipe_num}\"\n    )\n\n    applywarp_biasfield.inputs.relwarp = True\n    applywarp_biasfield.inputs.interp = \"spline\"\n\n    node, out = strat_pool.get_data(\"pipeline-fs_desc-fast_biasfield\")\n    wf.connect(node, out, applywarp_biasfield, \"in_file\")\n\n    node, out = strat_pool.get_data(\"space-T1w_desc-brain_mask\")\n    wf.connect(node, out, applywarp_biasfield, \"ref_file\")\n\n    node, out = strat_pool.get_data(\"from-T1w_to-template_mode-image_xfm\")\n    wf.connect(node, out, applywarp_biasfield, \"field_file\")\n\n    # fslmaths \"$BiasFieldOutput\" -thr 0.1 \"$BiasFieldOutput\"\n    threshold_biasfield = pe.Node(\n        interface=fsl.ImageMaths(), name=f\"threshold_biasfield_{pipe_num}\"\n    )\n\n    threshold_biasfield.inputs.op_string = \"-thr 0.1\"\n    wf.connect(applywarp_biasfield, \"out_file\", threshold_biasfield, \"in_file\")\n\n    # Ref: https://github.com/DCAN-Labs/DCAN-HCP/blob/a8d495a/PostFreeSurfer/scripts/CreateMyelinMaps.sh#L67-L70\n    # applywarp --rel --interp=spline -i \"$OrginalT1wImage\" -r \"$T1wImageBrain\" -w \"$OutputOrigT1wToT1w\" -o \"$OutputT1wImage\"\n    applywarp_t1 = pe.Node(interface=fsl.ApplyWarp(), name=f\"applywarp_t1_{pipe_num}\")\n\n    applywarp_t1.inputs.relwarp = True\n    applywarp_t1.inputs.interp = \"spline\"\n\n    node, out = strat_pool.get_data(\"desc-n4_T1w\")\n    wf.connect(node, out, applywarp_t1, \"in_file\")\n\n    node, out = strat_pool.get_data(\"space-T1w_desc-brain_mask\")\n    wf.connect(node, out, applywarp_t1, \"ref_file\")\n\n    wf.connect(convertwarp_orig_t1_to_t1, \"out_file\", applywarp_t1, \"field_file\")\n\n    # fslmaths \"$OutputT1wImage\" -abs \"$OutputT1wImage\" -odt float\n    abs_t1 = pe.Node(interface=fsl.ImageMaths(), name=f\"abs_t1_{pipe_num}\")\n\n    abs_t1.inputs.op_string = \"-abs\"\n    wf.connect(applywarp_t1, \"out_file\", abs_t1, \"in_file\")\n\n    # fslmaths \"$OutputT1wImage\" -div \"$BiasField\" \"$OutputT1wImageRestore\"\n    div_t1_by_biasfield = pe.Node(\n        interface=fsl.ImageMaths(), name=f\"div_t1_by_biasfield_{pipe_num}\"\n    )\n\n    div_t1_by_biasfield.inputs.op_string = \"-div\"\n\n    wf.connect(abs_t1, \"out_file\", div_t1_by_biasfield, \"in_file\")\n\n    node, out = strat_pool.get_data(\"pipeline-fs_desc-fast_biasfield\")\n    wf.connect(node, out, div_t1_by_biasfield, \"in_file2\")\n\n    # fslmaths \"$OutputT1wImageRestore\" -mas \"$T1wImageBrain\" \"$OutputT1wImageRestoreBrain\"\n    apply_mask = pe.Node(\n        interface=fsl.maths.ApplyMask(), name=f\"get_restored_corrected_brain_{pipe_num}\"\n    )\n\n    wf.connect(div_t1_by_biasfield, \"out_file\", apply_mask, \"in_file\")\n\n    node, out = strat_pool.get_data(\"space-T1w_desc-brain_mask\")\n    wf.connect(node, out, apply_mask, \"mask_file\")\n\n    outputs = {\"desc-restore-brain_T1w\": (apply_mask, \"out_file\")}\n\n    return (wf, outputs)",
-    "workflows": []
+    "workflows": [
+      "abcd-options",
+      "abcd-prep",
+      "anat-only",
+      "benchmark-ants",
+      "benchmark-fnirt",
+      "blank",
+      "ccs-options",
+      "default-deprecated",
+      "default",
+      "fmriprep-ingress",
+      "fmriprep-options",
+      "fx-options",
+      "monkey-abcd",
+      "monkey",
+      "ndmg",
+      "nhp-macaque",
+      "preproc",
+      "rbc-options",
+      "regtest-1",
+      "regtest-2",
+      "regtest-3",
+      "regtest-4",
+      "rodent"
+    ]
   },
   {
     "name": "distcor_phasediff_fsl_fugue",
@@ -2499,7 +2555,6 @@
     "source_code": "def calc_motion_stats(wf, cfg, strat_pool, pipe_num, opt=None):\n    \"\"\"Calculate motion statistics for motion parameters.\"\"\"\n    motion_prov = strat_pool.get_cpac_provenance(\"desc-movementParameters_motion\")\n    motion_correct_tool = check_prov_for_motion_tool(motion_prov)\n    coordinate_transformation = [\n        \"filtered-coordinate-transformation\",\n        \"coordinate-transformation\",\n    ]\n    gen_motion_stats = motion_power_statistics(\n        name=f\"gen_motion_stats_{pipe_num}\",\n        motion_correct_tool=motion_correct_tool,\n        filtered=strat_pool.filtered_movement,\n    )\n\n    # Special case where the workflow is not getting outputs from\n    # resource pool but is connected to functional datasource\n    wf.connect(\n        *strat_pool.get_data(\"desc-preproc_bold\"),\n        gen_motion_stats,\n        \"inputspec.motion_correct\",\n    )\n    wf.connect(\n        *strat_pool.get_data(\"space-bold_desc-brain_mask\"),\n        gen_motion_stats,\n        \"inputspec.mask\",\n    )\n    wf.connect(\n        *strat_pool.get_data(\"desc-movementParameters_motion\"),\n        gen_motion_stats,\n        \"inputspec.movement_parameters\",\n    )\n    wf.connect(\n        *strat_pool.get_data(\"max-displacement\"),\n        gen_motion_stats,\n        \"inputspec.max_displacement\",\n    )\n\n    if strat_pool.check_rpool(\"rels-displacement\"):\n        wf.connect(\n            *strat_pool.get_data(\"rels-displacement\"),\n            gen_motion_stats,\n            \"inputspec.rels_displacement\",\n        )\n    if strat_pool.check_rpool(coordinate_transformation):\n        wf.connect(\n            *strat_pool.get_data(coordinate_transformation),\n            gen_motion_stats,\n            \"inputspec.transformations\",\n        )\n\n    outputs = {\n        \"framewise-displacement-power\": (gen_motion_stats, \"outputspec.FDP_1D\"),\n        \"framewise-displacement-jenkinson\": (gen_motion_stats, \"outputspec.FDJ_1D\"),\n        \"dvars\": (gen_motion_stats, \"outputspec.DVARS_1D\"),\n        \"power-params\": (gen_motion_stats, \"outputspec.power_params\"),\n        \"motion-params\": (gen_motion_stats, \"outputspec.motion_params\"),\n        \"motion\": (gen_motion_stats, \"outputspec.motion\"),\n        \"desc-summary_motion\": (gen_motion_stats, \"outputspec.desc-summary_motion\"),\n    }\n\n    return wf, outputs",
     "workflows": [
       "abcd-options",
-      "anat-only",
       "benchmark-ants",
       "benchmark-fnirt",
       "ccs-options",
@@ -2885,7 +2940,31 @@
     },
     "docstring": "Truncate functional timeseries.",
     "source_code": "def func_truncate(wf, cfg, strat_pool, pipe_num, opt=None):\n    \"\"\"Truncate functional timeseries.\"\"\"\n    # if cfg.functional_preproc['truncation']['start_tr'] == 0 and \\\n    #                cfg.functional_preproc['truncation']['stop_tr'] == None:\n    #    data, key = strat_pool.get_data(\"desc-preproc_bold\",\n    #                                           True)\n    #    outputs = {key: data}\n    #    return (wf, outputs)\n\n    trunc_wf = create_wf_edit_func(wf_name=f\"edit_func_{pipe_num}\")\n    trunc_wf.inputs.inputspec.start_idx = cfg.functional_preproc[\"truncation\"][\n        \"start_tr\"\n    ]\n    trunc_wf.inputs.inputspec.stop_idx = cfg.functional_preproc[\"truncation\"][\"stop_tr\"]\n\n    node, out = strat_pool.get_data(\"desc-preproc_bold\")\n    wf.connect(node, out, trunc_wf, \"inputspec.func\")\n\n    outputs = {\"desc-preproc_bold\": (trunc_wf, \"outputspec.edited_func\")}\n\n    return (wf, outputs)",
-    "workflows": []
+    "workflows": [
+      "abcd-options",
+      "abcd-prep",
+      "anat-only",
+      "benchmark-ants",
+      "benchmark-fnirt",
+      "blank",
+      "ccs-options",
+      "default-deprecated",
+      "default",
+      "fmriprep-ingress",
+      "fmriprep-options",
+      "fx-options",
+      "monkey-abcd",
+      "monkey",
+      "ndmg",
+      "nhp-macaque",
+      "preproc",
+      "rbc-options",
+      "regtest-1",
+      "regtest-2",
+      "regtest-3",
+      "regtest-4",
+      "rodent"
+    ]
   },
   {
     "name": "func_despike",
@@ -3076,7 +3155,6 @@
     "source_code": "def bold_mask_afni(wf, cfg, strat_pool, pipe_num, opt=None):\n    \"\"\"Generate a functional mask with AFNI.\"\"\"\n    func_get_brain_mask = pe.Node(\n        interface=preprocess.Automask(), name=f\"func_get_brain_mask_AFNI_{pipe_num}\"\n    )\n    func_get_brain_mask.inputs.outputtype = \"NIFTI_GZ\"\n\n    node, out = strat_pool.get_data(\"desc-preproc_bold\")\n    wf.connect(node, out, func_get_brain_mask, \"in_file\")\n\n    outputs = {\"space-bold_desc-brain_mask\": (func_get_brain_mask, \"out_file\")}\n\n    return (wf, outputs)",
     "workflows": [
       "abcd-options",
-      "anat-only",
       "benchmark-ants",
       "benchmark-fnirt",
       "ccs-options",
@@ -3131,7 +3209,6 @@
     "source_code": "def bold_mask_fsl(wf, cfg, strat_pool, pipe_num, opt=None):\n    \"\"\"Generate functional mask with FSL.\"\"\"\n    inputnode_bet = pe.Node(\n        util.IdentityInterface(\n            fields=[\n                \"frac\",\n                \"mesh_boolean\",\n                \"outline\",\n                \"padding\",\n                \"radius\",\n                \"reduce_bias\",\n                \"remove_eyes\",\n                \"robust\",\n                \"skull\",\n                \"surfaces\",\n                \"threshold\",\n                \"vertical_gradient\",\n            ]\n        ),\n        name=f\"BET_options_{pipe_num}\",\n    )\n\n    func_get_brain_mask = pe.Node(\n        interface=fsl.BET(), name=f\"func_get_brain_mask_BET_{pipe_num}\"\n    )\n    func_get_brain_mask.inputs.output_type = \"NIFTI_GZ\"\n    func_get_brain_mask.inputs.mask = True\n\n    inputnode_bet.inputs.set(\n        frac=cfg.functional_preproc[\"func_masking\"][\"FSL-BET\"][\"frac\"],\n        mesh_boolean=cfg.functional_preproc[\"func_masking\"][\"FSL-BET\"][\"mesh_boolean\"],\n        outline=cfg.functional_preproc[\"func_masking\"][\"FSL-BET\"][\"outline\"],\n        padding=cfg.functional_preproc[\"func_masking\"][\"FSL-BET\"][\"padding\"],\n        radius=cfg.functional_preproc[\"func_masking\"][\"FSL-BET\"][\"radius\"],\n        reduce_bias=cfg.functional_preproc[\"func_masking\"][\"FSL-BET\"][\"reduce_bias\"],\n        remove_eyes=cfg.functional_preproc[\"func_masking\"][\"FSL-BET\"][\"remove_eyes\"],\n        robust=cfg.functional_preproc[\"func_masking\"][\"FSL-BET\"][\"robust\"],\n        skull=cfg.functional_preproc[\"func_masking\"][\"FSL-BET\"][\"skull\"],\n        surfaces=cfg.functional_preproc[\"func_masking\"][\"FSL-BET\"][\"surfaces\"],\n        threshold=cfg.functional_preproc[\"func_masking\"][\"FSL-BET\"][\"threshold\"],\n        vertical_gradient=cfg.functional_preproc[\"func_masking\"][\"FSL-BET\"][\n            \"vertical_gradient\"\n        ],\n    )\n\n    wf.connect(\n        [\n            (\n                inputnode_bet,\n                func_get_brain_mask,\n                [\n                    (\"frac\", \"frac\"),\n                    (\"mesh_boolean\", \"mesh\"),\n                    (\"outline\", \"outline\"),\n                    (\"padding\", \"padding\"),\n                    (\"radius\", \"radius\"),\n                    (\"reduce_bias\", \"reduce_bias\"),\n                    (\"remove_eyes\", \"remove_eyes\"),\n                    (\"robust\", \"robust\"),\n                    (\"skull\", \"skull\"),\n                    (\"surfaces\", \"surfaces\"),\n                    (\"threshold\", \"threshold\"),\n                    (\"vertical_gradient\", \"vertical_gradient\"),\n                ],\n            )\n        ]\n    )\n\n    if cfg.functional_preproc[\"func_masking\"][\"FSL-BET\"][\"functional_mean_boolean\"]:\n        func_skull_mean = pe.Node(\n            interface=afni_utils.TStat(), name=f\"func_mean_skull_{pipe_num}\"\n        )\n        func_skull_mean.inputs.options = \"-mean\"\n        func_skull_mean.inputs.outputtype = \"NIFTI_GZ\"\n\n        node, out = strat_pool.get_data(\"desc-preproc_bold\")\n        wf.connect(node, out, func_skull_mean, \"in_file\")\n\n        out_node, out_file = (func_skull_mean, \"out_file\")\n\n        if cfg.functional_preproc[\"func_masking\"][\"FSL-BET\"][\"functional_mean_thr\"][\n            \"run\"\n        ]:\n            # T=$(fslstats ${subject}_tmean.nii.gz -p 98)\n            threshold_T = pe.Node(\n                interface=fsl.ImageStats(),\n                name=f\"func_mean_skull_thr_value_{pipe_num}\",\n                iterfield=[\"in_file\"],\n            )\n            threshold_T.inputs.op_string = (\n                \"-p %f \"\n                % (\n                    cfg.functional_preproc[\"func_masking\"][\"FSL-BET\"][\n                        \"functional_mean_thr\"\n                    ][\"threshold_value\"]\n                )\n            )\n\n            wf.connect(func_skull_mean, \"out_file\", threshold_T, \"in_file\")\n\n            # z=$(echo \"$T / 10\" | bc -l)\n            def form_thr_string(thr):\n                threshold_z = str(float(thr / 10))\n                return \"-thr %s\" % (threshold_z)\n\n            form_thr_string = pe.Node(\n                Function(\n                    input_names=[\"thr\"],\n                    output_names=[\"out_str\"],\n                    function=form_thr_string,\n                ),\n                name=f\"form_thr_string_{pipe_num}\",\n            )\n\n            wf.connect(threshold_T, \"out_stat\", form_thr_string, \"thr\")\n\n            # fslmaths ${subject}_tmean.nii.gz -thr ${z} ${subject}_tmean_thr.nii.gz\n            func_skull_mean_thr = pe.Node(\n                interface=fsl.ImageMaths(), name=f\"func_mean_skull_thr_{pipe_num}\"\n            )\n\n            wf.connect(func_skull_mean, \"out_file\", func_skull_mean_thr, \"in_file\")\n            wf.connect(form_thr_string, \"out_str\", func_skull_mean_thr, \"op_string\")\n\n            out_node, out_file = (func_skull_mean_thr, \"out_file\")\n\n        if cfg.functional_preproc[\"func_masking\"][\"FSL-BET\"][\n            \"functional_mean_bias_correction\"\n        ]:\n            # fast --nopve -B ${subject}_tmean_thr.nii.gz\n            func_mean_skull_fast = pe.Node(\n                interface=fsl.FAST(), name=f\"func_mean_skull_fast_{pipe_num}\"\n            )\n            func_mean_skull_fast.inputs.no_pve = True\n            func_mean_skull_fast.inputs.output_biascorrected = True\n\n            wf.connect(out_node, out_file, func_mean_skull_fast, \"in_files\")\n\n            out_node, out_file = (func_mean_skull_fast, \"restored_image\")\n\n        wf.connect(out_node, out_file, func_get_brain_mask, \"in_file\")\n\n    else:\n        func_get_brain_mask.inputs.functional = True\n\n        node, out = strat_pool.get_data(\"desc-preproc_bold\")\n        wf.connect(node, out, func_get_brain_mask, \"in_file\")\n\n    # erode one voxel of functional brian mask\n    erode_one_voxel = pe.Node(\n        interface=fsl.ErodeImage(), name=f\"erode_one_voxel_{pipe_num}\"\n    )\n\n    erode_one_voxel.inputs.kernel_shape = \"box\"\n    erode_one_voxel.inputs.kernel_size = 1.0\n\n    wf.connect(func_get_brain_mask, \"mask_file\", erode_one_voxel, \"in_file\")\n\n    outputs = {\"space-bold_desc-brain_mask\": (erode_one_voxel, \"out_file\")}\n\n    return (wf, outputs)",
     "workflows": [
       "abcd-options",
-      "anat-only",
       "benchmark-ants",
       "benchmark-fnirt",
       "ccs-options",
@@ -3190,7 +3267,6 @@
     "source_code": "def bold_mask_fsl_afni(wf, cfg, strat_pool, pipe_num, opt=None):\n    \"\"\"fMRIPrep-style BOLD mask.\n\n        Enhance and run brain extraction on a BOLD EPI image.\n\n        This workflow takes in a :abbr:`BOLD (blood-oxygen level-dependant)`\n        :abbr:`fMRI (functional MRI)` average/summary (e.g., a reference image\n        averaging non-steady-state timepoints), and sharpens the histogram\n        with the application of the N4 algorithm for removing the\n        :abbr:`INU (intensity non-uniformity)` bias field and calculates a signal\n        mask.\n\n        Steps of this workflow are:\n\n        [1]. Binary dilation of the tentative mask with a sphere of 3mm diameter.\n        [2]. Run ANTs' ``N4BiasFieldCorrection`` on the input\n            :abbr:`BOLD (blood-oxygen level-dependant)` average, using the\n            mask generated in 1) instead of the internal Otsu thresholding.\n        [3]. Calculate a loose mask using FSL's ``bet``, with one mathematical morphology\n            dilation of one iteration and a sphere of 6mm as structuring element.\n        [4]. Mask the :abbr:`INU (intensity non-uniformity)`-corrected image\n            with the latest mask calculated in 3), then use AFNI's ``3dUnifize``\n            to *standardize* the T2* contrast distribution.\n        [5]. Calculate a mask using AFNI's ``3dAutomask`` after the contrast\n            enhancement of 4).\n        [6]. Calculate a final mask as the intersection of 4) and 6).\n        [7]. Apply final mask on the enhanced reference.\n\n    `Ref <https://github.com/nipreps/niworkflows/blob/maint/1.3.x/niworkflows/func/util.py#L246-L514>`_.\n    \"\"\"\n    # STATEMENT OF CHANGES:\n    #     This function is derived from sources licensed under the Apache-2.0 terms,\n    #     and this function has been changed.\n\n    # CHANGES:\n    #     * Converted from a plain function to a CPAC.pipeline.nodeblock.NodeBlockFunction\n    #     * Removed Registration version check\n    #     * Hardcoded Registration parameters instead of loading epi_atlasbased_brainmask.json\n    #     * Uses C-PAC's ``FSL-AFNI-brain-probseg`` template in place of ``templateflow.api.get(\"MNI152NLin2009cAsym\", resolution=1, label=\"brain\", suffix=\"probseg\")``\n    #     * Replaced niworkflows.interfaces.nibabel.Binarize with fsl.maths.MathsCommand and hardcoded threshold\n    #     * Replaced niworkflows.interfaces.images.MatchHeader with CPAC.utils.interfaces.ants.(PrintHeader and SetDirectionByMatrix)\n    #     * Removed header fix for unifize\n    #     * Removed header fix for skullstrip_second_pass\n    #     * Removed ``if not pre_mask`` conditional block\n    #     * Modified docstring to reflect local changes\n    #     * Refactored some variables and connections and updated style to match C-PAC codebase\n\n    # ORIGINAL WORK'S ATTRIBUTION NOTICE:\n    #    Copyright (c) 2016, the CRN developers team.\n    #    All rights reserved.\n\n    #    Redistribution and use in source and binary forms, with or without\n    #    modification, are permitted provided that the following conditions are met:\n\n    #    * Redistributions of source code must retain the above copyright notice, this\n    #      list of conditions and the following disclaimer.\n\n    #    * Redistributions in binary form must reproduce the above copyright notice,\n    #      this list of conditions and the following disclaimer in the documentation\n    #      and/or other materials provided with the distribution.\n\n    #   * Neither the name of niworkflows nor the names of its\n    #      contributors may be used to endorse or promote products derived from\n    #      this software without specific prior written permission.\n\n    #    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"\n    #    AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n    #    IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\n    #    DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE\n    #    FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n    #    DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR\n    #    SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER\n    #    CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,\n    #    OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\n    #    OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n\n    #    Licensed under the Apache License, Version 2.0 (the \"License\");\n    #    you may not use this file except in compliance with the License.\n    #    You may obtain a copy of the License at\n\n    #        http://www.apache.org/licenses/LICENSE-2.0\n\n    #    Unless required by applicable law or agreed to in writing, software\n    #    distributed under the License is distributed on an \"AS IS\" BASIS,\n    #    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n    #    See the License for the specific language governing permissions and\n    #    limitations under the License.\n\n    # Modifications copyright (C) 2021 - 2024  C-PAC Developers\n\n    # Initialize transforms with antsAI\n    init_aff = pe.Node(\n        AI(\n            metric=(\"Mattes\", 32, \"Regular\", 0.2),\n            transform=(\"Affine\", 0.1),\n            search_factor=(20, 0.12),\n            principal_axes=False,\n            convergence=(10, 1e-6, 10),\n            verbose=True,\n        ),\n        name=f\"init_aff_{pipe_num}\",\n        n_procs=cfg.pipeline_setup[\"system_config\"][\"num_OMP_threads\"],\n    )\n    node, out = strat_pool.get_data(\"FSL-AFNI-bold-ref\")\n    wf.connect(node, out, init_aff, \"fixed_image\")\n\n    node, out = strat_pool.get_data(\"FSL-AFNI-brain-mask\")\n    wf.connect(node, out, init_aff, \"fixed_image_mask\")\n\n    init_aff.inputs.search_grid = (40, (0, 40, 40))\n\n    # Set up spatial normalization\n    norm = pe.Node(\n        ants.Registration(\n            winsorize_upper_quantile=0.98,\n            winsorize_lower_quantile=0.05,\n            float=True,\n            metric=[\"Mattes\"],\n            metric_weight=[1],\n            radius_or_number_of_bins=[64],\n            transforms=[\"Affine\"],\n            transform_parameters=[[0.1]],\n            number_of_iterations=[[200]],\n            convergence_window_size=[10],\n            convergence_threshold=[1.0e-9],\n            sampling_strategy=[\"Random\", \"Random\"],\n            smoothing_sigmas=[[2]],\n            sigma_units=[\"mm\", \"mm\", \"mm\"],\n            shrink_factors=[[2]],\n            sampling_percentage=[0.2],\n            use_histogram_matching=[True],\n        ),\n        name=f\"norm_{pipe_num}\",\n        n_procs=cfg.pipeline_setup[\"system_config\"][\"num_OMP_threads\"],\n    )\n\n    node, out = strat_pool.get_data(\"FSL-AFNI-bold-ref\")\n    wf.connect(node, out, norm, \"fixed_image\")\n\n    map_brainmask = pe.Node(\n        ants.ApplyTransforms(\n            interpolation=\"BSpline\",\n            float=True,\n        ),\n        name=f\"map_brainmask_{pipe_num}\",\n    )\n\n    # Use the higher resolution and probseg for numerical stability in rounding\n    node, out = strat_pool.get_data(\"FSL-AFNI-brain-probseg\")\n    wf.connect(node, out, map_brainmask, \"input_image\")\n\n    binarize_mask = pe.Node(\n        interface=fsl.maths.MathsCommand(), name=f\"binarize_mask_{pipe_num}\"\n    )\n    binarize_mask.inputs.args = \"-thr 0.85 -bin\"\n\n    # Dilate pre_mask\n    pre_dilate = pe.Node(\n        fsl.DilateImage(\n            operation=\"max\",\n            kernel_shape=\"sphere\",\n            kernel_size=3.0,\n            internal_datatype=\"char\",\n        ),\n        name=f\"pre_mask_dilate_{pipe_num}\",\n    )\n\n    # Fix precision errors\n    # https://github.com/ANTsX/ANTs/wiki/Inputs-do-not-occupy-the-same-physical-space#fixing-precision-errors\n    print_header = pe.Node(\n        PrintHeader(what_information=4), name=f\"print_header_{pipe_num}\"\n    )\n    set_direction = pe.Node(SetDirectionByMatrix(), name=f\"set_direction_{pipe_num}\")\n\n    # Run N4 normally, force num_threads=1 for stability (images are\n    # small, no need for >1)\n    n4_correct = pe.Node(\n        ants.N4BiasFieldCorrection(\n            dimension=3, copy_header=True, bspline_fitting_distance=200\n        ),\n        shrink_factor=2,\n        rescale_intensities=True,\n        name=f\"n4_correct_{pipe_num}\",\n        n_procs=1,\n    )\n\n    # Create a generous BET mask out of the bias-corrected EPI\n    skullstrip_first_pass = pe.Node(\n        fsl.BET(frac=0.2, mask=True, functional=False),\n        name=f\"skullstrip_first_pass_{pipe_num}\",\n    )\n\n    bet_dilate = pe.Node(\n        fsl.DilateImage(\n            operation=\"max\",\n            kernel_shape=\"sphere\",\n            kernel_size=6.0,\n            internal_datatype=\"char\",\n        ),\n        name=f\"skullstrip_first_dilate_{pipe_num}\",\n    )\n\n    bet_mask = pe.Node(fsl.ApplyMask(), name=f\"skullstrip_first_mask_{pipe_num}\")\n\n    # Use AFNI's unifize for T2 constrast\n    unifize = pe.Node(\n        afni_utils.Unifize(\n            t2=True,\n            outputtype=\"NIFTI_GZ\",\n            args=\"-clfrac 0.2 -rbt 18.3 65.0 90.0\",\n            out_file=\"uni.nii.gz\",\n        ),\n        name=f\"unifize_{pipe_num}\",\n    )\n\n    # Run ANFI's 3dAutomask to extract a refined brain mask\n    skullstrip_second_pass = pe.Node(\n        preprocess.Automask(dilate=1, outputtype=\"NIFTI_GZ\"),\n        name=f\"skullstrip_second_pass_{pipe_num}\",\n    )\n\n    # Take intersection of both masks\n    combine_masks = pe.Node(\n        fsl.BinaryMaths(operation=\"mul\"), name=f\"combine_masks_{pipe_num}\"\n    )\n\n    # Compute masked brain\n    apply_mask = pe.Node(fsl.ApplyMask(), name=f\"extract_ref_brain_bold_{pipe_num}\")\n\n    node, out = strat_pool.get_data([\"motion-basefile\"])\n\n    wf.connect(\n        [\n            (node, init_aff, [(out, \"moving_image\")]),\n            (node, map_brainmask, [(out, \"reference_image\")]),\n            (node, norm, [(out, \"moving_image\")]),\n            (init_aff, norm, [(\"output_transform\", \"initial_moving_transform\")]),\n            (\n                norm,\n                map_brainmask,\n                [\n                    (\"reverse_invert_flags\", \"invert_transform_flags\"),\n                    (\"reverse_transforms\", \"transforms\"),\n                ],\n            ),\n            (map_brainmask, binarize_mask, [(\"output_image\", \"in_file\")]),\n            (binarize_mask, pre_dilate, [(\"out_file\", \"in_file\")]),\n            (pre_dilate, print_header, [(\"out_file\", \"image\")]),\n            (print_header, set_direction, [(\"header\", \"direction\")]),\n            (node, set_direction, [(out, \"infile\"), (out, \"outfile\")]),\n            (set_direction, n4_correct, [(\"outfile\", \"mask_image\")]),\n            (node, n4_correct, [(out, \"input_image\")]),\n            (n4_correct, skullstrip_first_pass, [(\"output_image\", \"in_file\")]),\n            (skullstrip_first_pass, bet_dilate, [(\"mask_file\", \"in_file\")]),\n            (bet_dilate, bet_mask, [(\"out_file\", \"mask_file\")]),\n            (skullstrip_first_pass, bet_mask, [(\"out_file\", \"in_file\")]),\n            (bet_mask, unifize, [(\"out_file\", \"in_file\")]),\n            (unifize, skullstrip_second_pass, [(\"out_file\", \"in_file\")]),\n            (skullstrip_first_pass, combine_masks, [(\"mask_file\", \"in_file\")]),\n            (skullstrip_second_pass, combine_masks, [(\"out_file\", \"operand_file\")]),\n            (unifize, apply_mask, [(\"out_file\", \"in_file\")]),\n            (combine_masks, apply_mask, [(\"out_file\", \"mask_file\")]),\n        ]\n    )\n\n    outputs = {\n        \"space-bold_desc-brain_mask\": (combine_masks, \"out_file\"),\n        \"desc-ref_bold\": (apply_mask, \"out_file\"),\n    }\n\n    return (wf, outputs)",
     "workflows": [
       "abcd-options",
-      "anat-only",
       "benchmark-ants",
       "benchmark-fnirt",
       "ccs-options",
@@ -3255,7 +3331,6 @@
     "source_code": "def bold_mask_anatomical_refined(wf, cfg, strat_pool, pipe_num, opt=None):\n    \"\"\"Generate the BOLD mask by basing it off of the refined anatomical brain mask.\"\"\"\n    # binarize anat mask, in case it is not a binary mask.\n    anat_brain_mask_bin = pe.Node(\n        interface=fsl.ImageMaths(), name=f\"anat_brain_mask_bin_{pipe_num}\"\n    )\n    anat_brain_mask_bin.inputs.op_string = \"-bin\"\n\n    node, out = strat_pool.get_data(\n        [\"space-T1w_desc-brain_mask\", \"space-T1w_desc-acpcbrain_mask\"]\n    )\n    wf.connect(node, out, anat_brain_mask_bin, \"in_file\")\n\n    # fill holes of anat mask\n    anat_mask_filled = pe.Node(\n        interface=afni.MaskTool(), name=f\"anat_brain_mask_filled_{pipe_num}\"\n    )\n    anat_mask_filled.inputs.fill_holes = True\n    anat_mask_filled.inputs.outputtype = \"NIFTI_GZ\"\n\n    wf.connect(anat_brain_mask_bin, \"out_file\", anat_mask_filled, \"in_file\")\n\n    # init_bold_mask : input raw func\n    init_bold_mask = anat_refined_mask(\n        init_bold_mask=True, wf_name=f\"init_bold_mask_{pipe_num}\"\n    )\n\n    func_deoblique = pe.Node(\n        interface=afni_utils.Refit(), name=f\"raw_func_deoblique_{pipe_num}\"\n    )\n    func_deoblique.inputs.deoblique = True\n\n    node, out = strat_pool.get_data(\"bold\")\n    wf.connect(node, out, func_deoblique, \"in_file\")\n\n    func_reorient = pe.Node(\n        interface=afni_utils.Resample(),\n        name=f\"raw_func_reorient_{pipe_num}\",\n        mem_gb=0,\n        mem_x=(0.0115, \"in_file\", \"t\"),\n    )\n\n    func_reorient.inputs.orientation = cfg.pipeline_setup[\"desired_orientation\"]\n    func_reorient.inputs.outputtype = \"NIFTI_GZ\"\n\n    wf.connect(func_deoblique, \"out_file\", func_reorient, \"in_file\")\n\n    wf.connect(func_reorient, \"out_file\", init_bold_mask, \"inputspec.func\")\n\n    wf.connect(\n        anat_mask_filled, \"out_file\", init_bold_mask, \"inputspec.anatomical_brain_mask\"\n    )\n\n    node, out = strat_pool.get_data(\"desc-brain_T1w\")\n    wf.connect(node, out, init_bold_mask, \"inputspec.anat_brain\")\n\n    # dilate init func brain mask\n    func_tmp_brain_mask = pe.Node(\n        interface=fsl.ImageMaths(), name=f\"func_tmp_brain_mask_dil_{pipe_num}\"\n    )\n    func_tmp_brain_mask.inputs.op_string = \"-dilM\"\n\n    wf.connect(\n        init_bold_mask, \"outputspec.func_brain_mask\", func_tmp_brain_mask, \"in_file\"\n    )\n\n    # refined_bold_mask : input motion corrected func\n    refined_bold_mask = anat_refined_mask(\n        init_bold_mask=False, wf_name=f\"refined_bold_mask_{pipe_num}\"\n    )\n\n    node, out = strat_pool.get_data([\"desc-preproc_bold\", \"bold\"])\n    wf.connect(node, out, refined_bold_mask, \"inputspec.func\")\n\n    node, out = strat_pool.get_data(\"desc-brain_T1w\")\n    wf.connect(node, out, refined_bold_mask, \"inputspec.anat_brain\")\n\n    wf.connect(\n        func_tmp_brain_mask,\n        \"out_file\",\n        refined_bold_mask,\n        \"inputspec.init_func_brain_mask\",\n    )\n\n    # dilate anatomical mask\n    if cfg.functional_preproc[\"func_masking\"][\"Anatomical_Refined\"][\n        \"anatomical_mask_dilation\"\n    ]:\n        anat_mask_dilate = pe.Node(\n            interface=afni.MaskTool(), name=f\"anat_mask_dilate_{pipe_num}\"\n        )\n        anat_mask_dilate.inputs.dilate_inputs = \"1\"\n        anat_mask_dilate.inputs.outputtype = \"NIFTI_GZ\"\n\n        wf.connect(anat_mask_filled, \"out_file\", anat_mask_dilate, \"in_file\")\n        wf.connect(\n            anat_mask_dilate,\n            \"out_file\",\n            refined_bold_mask,\n            \"inputspec.anatomical_brain_mask\",\n        )\n\n    else:\n        wf.connect(\n            anat_mask_filled,\n            \"out_file\",\n            refined_bold_mask,\n            \"inputspec.anatomical_brain_mask\",\n        )\n\n    # get final func mask\n    func_mask_final = pe.Node(\n        interface=fsl.MultiImageMaths(), name=f\"func_mask_final_{pipe_num}\"\n    )\n    func_mask_final.inputs.op_string = \"-mul %s\"\n\n    wf.connect(func_tmp_brain_mask, \"out_file\", func_mask_final, \"in_file\")\n\n    wf.connect(\n        refined_bold_mask,\n        \"outputspec.func_brain_mask\",\n        func_mask_final,\n        \"operand_files\",\n    )\n\n    outputs = {\"space-bold_desc-brain_mask\": (func_mask_final, \"out_file\")}\n\n    return (wf, outputs)",
     "workflows": [
       "abcd-options",
-      "anat-only",
       "benchmark-ants",
       "benchmark-fnirt",
       "ccs-options",
@@ -3318,7 +3393,6 @@
     "source_code": "def bold_mask_anatomical_based(wf, cfg, strat_pool, pipe_num, opt=None):\n    \"\"\"Generate the BOLD mask by basing it off of the anatomical brain mask.\n\n    Adapted from `DCAN Lab's BOLD mask method from the ABCD pipeline <https://github.com/DCAN-Labs/DCAN-HCP/blob/a8d495a/fMRIVolume/scripts/DistortionCorrectionAndEPIToT1wReg_FLIRTBBRAndFreeSurferBBRbased.sh>`_.\n    \"\"\"\n    # 0. Take single volume of func\n    func_single_volume = pe.Node(interface=afni.Calc(), name=\"func_single_volume\")\n\n    func_single_volume.inputs.set(expr=\"a\", single_idx=1, outputtype=\"NIFTI_GZ\")\n\n    node, out = strat_pool.get_data(\"desc-preproc_bold\")\n    wf.connect(node, out, func_single_volume, \"in_file_a\")\n\n    # 1. Register func head to anat head to get func2anat matrix\n    linear_reg_func_to_anat = pe.Node(\n        interface=fsl.FLIRT(), name=\"func_to_anat_linear_reg\"\n    )\n    linear_reg_func_to_anat.inputs.dof = 6\n    linear_reg_func_to_anat.inputs.interp = \"spline\"\n    linear_reg_func_to_anat.inputs.searchr_x = [30, 30]\n    linear_reg_func_to_anat.inputs.searchr_y = [30, 30]\n    linear_reg_func_to_anat.inputs.searchr_z = [30, 30]\n\n    wf.connect(func_single_volume, \"out_file\", linear_reg_func_to_anat, \"in_file\")\n\n    node, out = strat_pool.get_data([\"desc-preproc_T1w\", \"desc-reorient_T1w\", \"T1w\"])\n    wf.connect(node, out, linear_reg_func_to_anat, \"reference\")\n\n    # 2. Inverse func to anat affine, to get anat-to-func transform\n    inv_func_to_anat_affine = pe.Node(\n        interface=fsl.ConvertXFM(), name=\"inv_func2anat_affine\"\n    )\n    inv_func_to_anat_affine.inputs.invert_xfm = True\n\n    wf.connect(\n        linear_reg_func_to_anat, \"out_matrix_file\", inv_func_to_anat_affine, \"in_file\"\n    )\n\n    # 3. get BOLD mask\n    # 3.1 Apply anat-to-func transform to transfer anatomical brain to functional space\n    reg_anat_brain_to_func = pe.Node(\n        interface=fsl.ApplyWarp(), name=\"reg_anat_brain_to_func\"\n    )\n    reg_anat_brain_to_func.inputs.interp = \"nn\"\n    reg_anat_brain_to_func.inputs.relwarp = True\n\n    node, out = strat_pool.get_data(\"desc-brain_T1w\")\n    wf.connect(node, out, reg_anat_brain_to_func, \"in_file\")\n\n    node, out = strat_pool.get_data(\"desc-preproc_bold\")\n    wf.connect(node, out, reg_anat_brain_to_func, \"ref_file\")\n\n    wf.connect(inv_func_to_anat_affine, \"out_file\", reg_anat_brain_to_func, \"premat\")\n\n    # 3.2 Binarize transfered image\n    func_mask_bin = pe.Node(interface=fsl.ImageMaths(), name=\"func_mask_bin\")\n    func_mask_bin.inputs.op_string = \"-abs -bin\"\n\n    wf.connect(reg_anat_brain_to_func, \"out_file\", func_mask_bin, \"in_file\")\n\n    # 3.3 Fill holes to get BOLD mask\n    func_mask_fill_holes = pe.Node(\n        interface=afni.MaskTool(), name=\"func_mask_fill_holes\"\n    )\n    func_mask_fill_holes.inputs.fill_holes = True\n    func_mask_fill_holes.inputs.outputtype = \"NIFTI_GZ\"\n\n    wf.connect(func_mask_bin, \"out_file\", func_mask_fill_holes, \"in_file\")\n\n    outputs = {\"space-bold_desc-brain_mask\": (func_mask_fill_holes, \"out_file\")}\n\n    return (wf, outputs)",
     "workflows": [
       "abcd-options",
-      "anat-only",
       "benchmark-ants",
       "benchmark-fnirt",
       "ccs-options",
@@ -3378,7 +3452,6 @@
     "source_code": "def bold_mask_anatomical_resampled(wf, cfg, strat_pool, pipe_num, opt=None):\n    \"\"\"Resample anatomical brain mask to get BOLD brain mask in standard space.\n\n    Adapted from `DCAN Lab's BOLD mask method from the ABCD pipeline <https://github.com/DCAN-Labs/DCAN-HCP/blob/1d90814/fMRIVolume/scripts/OneStepResampling.sh#L121-L132>`_.\n    \"\"\"\n    # applywarp --rel --interp=spline -i ${T1wImage} -r ${ResampRefIm} --premat=$FSLDIR/etc/flirtsch/ident.mat -o ${WD}/${T1wImageFile}.${FinalfMRIResolution}\n    anat_brain_to_func_res = pe.Node(\n        interface=fsl.ApplyWarp(), name=f\"resample_anat_brain_in_standard_{pipe_num}\"\n    )\n\n    anat_brain_to_func_res.inputs.interp = \"spline\"\n    anat_brain_to_func_res.inputs.premat = cfg.registration_workflows[\n        \"anatomical_registration\"\n    ][\"registration\"][\"FSL-FNIRT\"][\"identity_matrix\"]\n\n    node, out = strat_pool.get_data(\"space-template_desc-preproc_T1w\")\n    wf.connect(node, out, anat_brain_to_func_res, \"in_file\")\n\n    node, out = strat_pool.get_data(\"T1w-template-funcreg\")\n    wf.connect(node, out, anat_brain_to_func_res, \"ref_file\")\n\n    # Create brain masks in this space from the FreeSurfer output (changing resolution)\n    # applywarp --rel --interp=nn -i ${FreeSurferBrainMask}.nii.gz -r ${WD}/${T1wImageFile}.${FinalfMRIResolution} --premat=$FSLDIR/etc/flirtsch/ident.mat -o ${WD}/${FreeSurferBrainMaskFile}.${FinalfMRIResolution}.nii.gz\n    anat_brain_mask_to_func_res = pe.Node(\n        interface=fsl.ApplyWarp(),\n        name=f\"resample_anat_brain_mask_in_standard_{pipe_num}\",\n    )\n\n    anat_brain_mask_to_func_res.inputs.interp = \"nn\"\n    anat_brain_mask_to_func_res.inputs.premat = cfg.registration_workflows[\n        \"anatomical_registration\"\n    ][\"registration\"][\"FSL-FNIRT\"][\"identity_matrix\"]\n\n    node, out = strat_pool.get_data(\"space-template_desc-T1w_mask\")\n    wf.connect(node, out, anat_brain_mask_to_func_res, \"in_file\")\n\n    wf.connect(\n        anat_brain_to_func_res, \"out_file\", anat_brain_mask_to_func_res, \"ref_file\"\n    )\n\n    # Resample func mask in template space back to native space\n    func_mask_template_to_native = pe.Node(\n        interface=afni.Resample(),\n        name=f\"resample_func_mask_to_native_{pipe_num}\",\n        mem_gb=0,\n        mem_x=(0.0115, \"in_file\", \"t\"),\n    )\n    func_mask_template_to_native.inputs.resample_mode = \"NN\"\n    func_mask_template_to_native.inputs.outputtype = \"NIFTI_GZ\"\n\n    wf.connect(\n        anat_brain_mask_to_func_res, \"out_file\", func_mask_template_to_native, \"in_file\"\n    )\n\n    node, out = strat_pool.get_data(\"desc-preproc_bold\")\n    wf.connect(node, out, func_mask_template_to_native, \"master\")\n\n    outputs = {\n        \"space-template_res-bold_desc-brain_T1w\": (anat_brain_to_func_res, \"out_file\"),\n        \"space-template_desc-bold_mask\": (anat_brain_mask_to_func_res, \"out_file\"),\n        \"space-bold_desc-brain_mask\": (func_mask_template_to_native, \"out_file\"),\n    }\n\n    return (wf, outputs)",
     "workflows": [
       "abcd-options",
-      "anat-only",
       "benchmark-ants",
       "benchmark-fnirt",
       "ccs-options",
@@ -3444,7 +3517,6 @@
     "source_code": "def bold_mask_ccs(wf, cfg, strat_pool, pipe_num, opt=None):\n    \"\"\"Generate the BOLD mask by basing it off of the anatomical brain.\n\n    Adapted from `the BOLD mask method from the CCS pipeline <https://github.com/TingsterX/CCS/blob/c5433fc/H1/ccs_01_funcpreproc.sh#L89-L110>`_.\n    \"\"\"\n    # Run 3dAutomask to generate func initial mask\n    func_tmp_brain_mask = pe.Node(\n        interface=preprocess.Automask(), name=f\"func_tmp_brain_mask_AFNI_{pipe_num}\"\n    )\n    func_tmp_brain_mask.inputs.dilate = 1\n    func_tmp_brain_mask.inputs.outputtype = \"NIFTI_GZ\"\n\n    node, out = strat_pool.get_data([\"desc-motion_bold\", \"desc-preproc_bold\", \"bold\"])\n    wf.connect(node, out, func_tmp_brain_mask, \"in_file\")\n\n    # Extract 8th volume as func ROI\n    func_roi = pe.Node(interface=fsl.ExtractROI(), name=f\"extract_func_roi_{pipe_num}\")\n    func_roi.inputs.t_min = 7\n    func_roi.inputs.t_size = 1\n\n    node, out = strat_pool.get_data([\"desc-motion_bold\", \"desc-preproc_bold\", \"bold\"])\n    wf.connect(node, out, func_roi, \"in_file\")\n\n    # Apply func initial mask on func ROI volume\n    func_tmp_brain = pe.Node(\n        interface=fsl.maths.ApplyMask(), name=f\"get_func_tmp_brain_{pipe_num}\"\n    )\n\n    wf.connect(func_roi, \"roi_file\", func_tmp_brain, \"in_file\")\n\n    wf.connect(func_tmp_brain_mask, \"out_file\", func_tmp_brain, \"mask_file\")\n\n    # Register func tmp brain to anat brain to get func2anat matrix\n    reg_func_to_anat = pe.Node(\n        interface=fsl.FLIRT(), name=f\"func_to_anat_linear_reg_{pipe_num}\"\n    )\n    reg_func_to_anat.inputs.interp = \"trilinear\"\n    reg_func_to_anat.inputs.cost = \"corratio\"\n    reg_func_to_anat.inputs.dof = 6\n\n    wf.connect(func_tmp_brain, \"out_file\", reg_func_to_anat, \"in_file\")\n\n    node, out = strat_pool.get_data(\"desc-brain_T1w\")\n    wf.connect(node, out, reg_func_to_anat, \"reference\")\n\n    # Inverse func2anat matrix\n    inv_func_to_anat_affine = pe.Node(\n        interface=fsl.ConvertXFM(), name=f\"inv_func2anat_affine_{pipe_num}\"\n    )\n    inv_func_to_anat_affine.inputs.invert_xfm = True\n\n    wf.connect(reg_func_to_anat, \"out_matrix_file\", inv_func_to_anat_affine, \"in_file\")\n\n    # Transform anat brain to func space\n    reg_anat_brain_to_func = pe.Node(\n        interface=fsl.FLIRT(), name=f\"reg_anat_brain_to_func_{pipe_num}\"\n    )\n    reg_anat_brain_to_func.inputs.apply_xfm = True\n    reg_anat_brain_to_func.inputs.interp = \"trilinear\"\n\n    node, out = strat_pool.get_data(\"desc-brain_T1w\")\n    wf.connect(node, out, reg_anat_brain_to_func, \"in_file\")\n\n    wf.connect(func_roi, \"roi_file\", reg_anat_brain_to_func, \"reference\")\n\n    wf.connect(\n        inv_func_to_anat_affine, \"out_file\", reg_anat_brain_to_func, \"in_matrix_file\"\n    )\n\n    # Binarize and dilate anat brain in func space\n    bin_anat_brain_in_func = pe.Node(\n        interface=fsl.ImageMaths(), name=f\"bin_anat_brain_in_func_{pipe_num}\"\n    )\n    bin_anat_brain_in_func.inputs.op_string = \"-bin -dilM\"\n\n    wf.connect(reg_anat_brain_to_func, \"out_file\", bin_anat_brain_in_func, \"in_file\")\n\n    # Binarize detectable func signals\n    bin_func = pe.Node(interface=fsl.ImageMaths(), name=f\"bin_func_{pipe_num}\")\n    bin_func.inputs.op_string = \"-Tstd -bin\"\n\n    node, out = strat_pool.get_data([\"desc-motion_bold\", \"desc-preproc_bold\", \"bold\"])\n    wf.connect(node, out, bin_func, \"in_file\")\n\n    # Take intersection of masks\n    merge_func_mask = pe.Node(util.Merge(2), name=f\"merge_func_mask_{pipe_num}\")\n\n    wf.connect(func_tmp_brain_mask, \"out_file\", merge_func_mask, \"in1\")\n\n    wf.connect(bin_anat_brain_in_func, \"out_file\", merge_func_mask, \"in2\")\n\n    intersect_mask = pe.Node(\n        interface=fsl.MultiImageMaths(), name=f\"intersect_mask_{pipe_num}\"\n    )\n    intersect_mask.inputs.op_string = \"-mul %s -mul %s\"\n    intersect_mask.inputs.output_datatype = \"char\"\n\n    wf.connect(bin_func, \"out_file\", intersect_mask, \"in_file\")\n\n    wf.connect(merge_func_mask, \"out\", intersect_mask, \"operand_files\")\n\n    # this is the func input for coreg in ccs\n    # TODO evaluate if it's necessary to use this brain\n    example_func_brain = pe.Node(\n        interface=fsl.maths.ApplyMask(), name=f\"get_example_func_brain_{pipe_num}\"\n    )\n\n    wf.connect(func_roi, \"roi_file\", example_func_brain, \"in_file\")\n\n    wf.connect(intersect_mask, \"out_file\", example_func_brain, \"mask_file\")\n\n    outputs = {\n        \"space-bold_desc-brain_mask\": (intersect_mask, \"out_file\"),\n        \"desc-ref_bold\": (example_func_brain, \"out_file\"),\n    }\n\n    return (wf, outputs)",
     "workflows": [
       "abcd-options",
-      "anat-only",
       "benchmark-ants",
       "benchmark-fnirt",
       "ccs-options",
@@ -3498,15 +3570,11 @@
     "docstring": "Generate a functional brain mask.",
     "source_code": "def bold_masking(wf, cfg, strat_pool, pipe_num, opt=None):\n    \"\"\"Generate a functional brain mask.\"\"\"\n    func_edge_detect = pe.Node(\n        interface=afni_utils.Calc(), name=f\"func_extract_brain_{pipe_num}\"\n    )\n\n    func_edge_detect.inputs.expr = \"a*b\"\n    func_edge_detect.inputs.outputtype = \"NIFTI_GZ\"\n\n    node, out = strat_pool.get_data(\"desc-preproc_bold\")\n    wf.connect(node, out, func_edge_detect, \"in_file_a\")\n\n    node, out = strat_pool.get_data(\"space-bold_desc-brain_mask\")\n    wf.connect(node, out, func_edge_detect, \"in_file_b\")\n\n    outputs = {\n        \"desc-preproc_bold\": (func_edge_detect, \"out_file\"),\n        \"desc-brain_bold\": (func_edge_detect, \"out_file\"),\n    }\n\n    return (wf, outputs)",
     "workflows": [
-      "abcd-options",
-      "anat-only",
       "benchmark-ants",
       "benchmark-fnirt",
-      "blank",
       "ccs-options",
       "default-deprecated",
       "default",
-      "fmriprep-ingress",
       "fmriprep-options",
       "fx-options",
       "monkey-abcd",
@@ -3550,7 +3618,6 @@
     "source_code": "def func_mean(wf, cfg, strat_pool, pipe_num, opt=None):\n    \"\"\"Generate a mean functional image.\"\"\"\n    func_mean = pe.Node(interface=afni_utils.TStat(), name=f\"func_mean_{pipe_num}\")\n\n    func_mean.inputs.options = \"-mean\"\n    func_mean.inputs.outputtype = \"NIFTI_GZ\"\n\n    node, out = strat_pool.get_data(\"desc-preproc_bold\")\n    wf.connect(node, out, func_mean, \"in_file\")\n\n    outputs = {\"desc-mean_bold\": (func_mean, \"out_file\")}\n\n    return (wf, outputs)",
     "workflows": [
       "abcd-options",
-      "anat-only",
       "benchmark-ants",
       "benchmark-fnirt",
       "ccs-options",
@@ -3598,21 +3665,16 @@
     "docstring": "Normalize a functional image.",
     "source_code": "def func_normalize(wf, cfg, strat_pool, pipe_num, opt=None):\n    \"\"\"Normalize a functional image.\"\"\"\n    func_normalize = pe.Node(\n        interface=fsl.ImageMaths(),\n        name=f\"func_normalize_{pipe_num}\",\n        mem_gb=0.7,\n        mem_x=(4538494663498653 / 604462909807314587353088, \"in_file\"),\n    )\n    func_normalize.inputs.op_string = \"-ing 10000\"\n    func_normalize.inputs.out_data_type = \"float\"\n\n    node, out = strat_pool.get_data(\"desc-preproc_bold\")\n    wf.connect(node, out, func_normalize, \"in_file\")\n\n    outputs = {\"desc-preproc_bold\": (func_normalize, \"out_file\")}\n\n    return (wf, outputs)",
     "workflows": [
-      "abcd-options",
-      "anat-only",
       "benchmark-ants",
       "benchmark-fnirt",
       "ccs-options",
       "default-deprecated",
       "default",
-      "fmriprep-options",
-      "fx-options",
       "monkey-abcd",
       "monkey",
       "ndmg",
       "nhp-macaque",
       "preproc",
-      "rbc-options",
       "regtest-1",
       "regtest-2",
       "regtest-3",
@@ -3958,28 +4020,6 @@
     "docstring": null,
     "source_code": "def ICA_AROMA_FSLEPIreg(wf, cfg, strat_pool, pipe_num, opt=None):\n    xfm_prov = strat_pool.get_cpac_provenance(\"from-bold_to-EPItemplate_mode-image_xfm\")\n    reg_tool = check_prov_for_regtool(xfm_prov)\n\n    if reg_tool != \"fsl\":\n        return (wf, None)\n\n    aroma_preproc = create_aroma(tr=None, wf_name=f\"create_aroma_{pipe_num}\")\n\n    aroma_preproc.inputs.params.denoise_type = cfg.nuisance_corrections[\"1-ICA-AROMA\"][\n        \"denoising_type\"\n    ]\n\n    node, out = strat_pool.get_data(\n        [\"desc-brain_bold\", \"desc-motion_bold\", \"desc-preproc_bold\", \"bold\"]\n    )\n    wf.connect(node, out, aroma_preproc, \"inputspec.denoise_file\")\n\n    node, out = strat_pool.get_data(\"from-bold_to-EPItemplate_mode-image_xfm\")\n    wf.connect(node, out, aroma_preproc, \"inputspec.fnirt_warp_file\")\n\n    if cfg.nuisance_corrections[\"1-ICA-AROMA\"][\"denoising_type\"] == \"nonaggr\":\n        node, out = (aroma_preproc, \"outputspec.nonaggr_denoised_file\")\n    elif cfg.nuisance_corrections[\"1-ICA-AROMA\"][\"denoising_type\"] == \"aggr\":\n        node, out = (aroma_preproc, \"outputspec.aggr_denoised_file\")\n\n    outputs = {\"desc-preproc_bold\": (node, out), \"desc-cleaned_bold\": (node, out)}\n\n    return (wf, outputs)",
     "workflows": [
-      "abcd-options",
-      "abcd-prep",
-      "anat-only",
-      "benchmark-ants",
-      "benchmark-fnirt",
-      "blank",
-      "ccs-options",
-      "default-deprecated",
-      "default",
-      "fmriprep-ingress",
-      "fmriprep-options",
-      "fx-options",
-      "monkey-abcd",
-      "monkey",
-      "ndmg",
-      "nhp-macaque",
-      "preproc",
-      "rbc-options",
-      "regtest-1",
-      "regtest-2",
-      "regtest-3",
-      "regtest-4",
       "rodent"
     ]
   },
@@ -4019,28 +4059,6 @@
     "docstring": null,
     "source_code": "def ICA_AROMA_ANTsEPIreg(wf, cfg, strat_pool, pipe_num, opt=None):\n    xfm_prov = strat_pool.get_cpac_provenance(\"from-bold_to-EPItemplate_mode-image_xfm\")\n    reg_tool = check_prov_for_regtool(xfm_prov)\n\n    if reg_tool != \"ants\":\n        return (wf, None)\n\n    num_cpus = cfg.pipeline_setup[\"system_config\"][\"max_cores_per_participant\"]\n\n    num_ants_cores = cfg.pipeline_setup[\"system_config\"][\"num_ants_threads\"]\n\n    aroma_preproc = create_aroma(tr=None, wf_name=f\"create_aroma_{pipe_num}\")\n    aroma_preproc.inputs.params.denoise_type = cfg.nuisance_corrections[\"1-ICA-AROMA\"][\n        \"denoising_type\"\n    ]\n\n    wf, outputs = warp_timeseries_to_EPItemplate(wf, cfg, strat_pool, pipe_num)\n    for key, val in outputs.items():\n        node, out = val\n\n    wf.connect(node, out, aroma_preproc, \"inputspec.denoise_file\")\n\n    apply_xfm = apply_transform(\n        f\"ICA-AROMA_ANTs_EPItemplate_to_bold_{pipe_num}\",\n        reg_tool=reg_tool,\n        time_series=True,\n        num_cpus=num_cpus,\n        num_ants_cores=num_ants_cores,\n    )\n    apply_xfm.inputs.inputspec.interpolation = cfg.registration_workflows[\n        \"functional_registration\"\n    ][\"func_registration_to_template\"][\"ANTs_pipelines\"][\"interpolation\"]\n\n    if cfg.nuisance_corrections[\"1-ICA-AROMA\"][\"denoising_type\"] == \"nonaggr\":\n        node, out = (aroma_preproc, \"outputspec.nonaggr_denoised_file\")\n    elif cfg.nuisance_corrections[\"1-ICA-AROMA\"][\"denoising_type\"] == \"aggr\":\n        node, out = (aroma_preproc, \"outputspec.aggr_denoised_file\")\n\n    wf.connect(node, out, apply_xfm, \"inputspec.input_image\")\n\n    node, out = strat_pool.get_data(\"sbref\")\n    wf.connect(node, out, apply_xfm, \"inputspec.reference\")\n\n    node, out = strat_pool.get_data(\"from-EPItemplate_to-bold_mode-image_xfm\")\n    wf.connect(node, out, apply_xfm, \"inputspec.transform\")\n\n    outputs = {\n        \"desc-preproc_bold\": (apply_xfm, \"outputspec.output_image\"),\n        \"desc-cleaned_bold\": (apply_xfm, \"outputspec.output_image\"),\n    }\n\n    return (wf, outputs)",
     "workflows": [
-      "abcd-options",
-      "abcd-prep",
-      "anat-only",
-      "benchmark-ants",
-      "benchmark-fnirt",
-      "blank",
-      "ccs-options",
-      "default-deprecated",
-      "default",
-      "fmriprep-ingress",
-      "fmriprep-options",
-      "fx-options",
-      "monkey-abcd",
-      "monkey",
-      "ndmg",
-      "nhp-macaque",
-      "preproc",
-      "rbc-options",
-      "regtest-1",
-      "regtest-2",
-      "regtest-3",
-      "regtest-4",
       "rodent"
     ]
   },
@@ -4080,28 +4098,9 @@
     "docstring": null,
     "source_code": "def erode_mask_T1w(wf, cfg, strat_pool, pipe_num, opt=None):\n    erode = erode_mask(f\"erode_T1w_mask_{pipe_num}\", segmentmap=False)\n    erode.inputs.inputspec.mask_erode_mm = cfg.nuisance_corrections[\n        \"2-nuisance_regression\"\n    ][\"regressor_masks\"][\"erode_anatomical_brain_mask\"][\"brain_mask_erosion_mm\"]\n    erode.inputs.inputspec.erode_prop = cfg.nuisance_corrections[\n        \"2-nuisance_regression\"\n    ][\"regressor_masks\"][\"erode_anatomical_brain_mask\"][\"brain_mask_erosion_prop\"]\n\n    node, out = strat_pool.get_data(\"space-T1w_desc-brain_mask\")\n    wf.connect(node, out, erode, \"inputspec.brain_mask\")\n\n    node, out = strat_pool.get_data([\"label-CSF_desc-preproc_mask\", \"label-CSF_mask\"])\n    wf.connect(node, out, erode, \"inputspec.mask\")\n\n    outputs = {\"space-T1w_desc-eroded_mask\": (erode, \"outputspec.eroded_mask\")}\n\n    return (wf, outputs)",
     "workflows": [
-      "abcd-options",
-      "abcd-prep",
-      "anat-only",
-      "benchmark-ants",
-      "benchmark-fnirt",
-      "blank",
-      "ccs-options",
-      "default-deprecated",
-      "default",
       "fmriprep-options",
       "fx-options",
-      "monkey-abcd",
-      "monkey",
-      "ndmg",
-      "nhp-macaque",
-      "preproc",
-      "rbc-options",
-      "regtest-1",
-      "regtest-2",
-      "regtest-3",
-      "regtest-4",
-      "rodent"
+      "rbc-options"
     ]
   },
   {
@@ -4140,28 +4139,9 @@
     "docstring": null,
     "source_code": "def erode_mask_CSF(wf, cfg, strat_pool, pipe_num, opt=None):\n    erode = erode_mask(f\"erode_CSF_mask_{pipe_num}\")\n    erode.inputs.inputspec.erode_mm = cfg.nuisance_corrections[\"2-nuisance_regression\"][\n        \"regressor_masks\"\n    ][\"erode_csf\"][\"csf_erosion_mm\"]\n    erode.inputs.inputspec.erode_prop = cfg.nuisance_corrections[\n        \"2-nuisance_regression\"\n    ][\"regressor_masks\"][\"erode_csf\"][\"csf_erosion_prop\"]\n\n    erode.inputs.inputspec.mask_erode_mm = cfg.nuisance_corrections[\n        \"2-nuisance_regression\"\n    ][\"regressor_masks\"][\"erode_csf\"][\"csf_mask_erosion_mm\"]\n\n    node, out = strat_pool.get_data([\"label-CSF_desc-preproc_mask\", \"label-CSF_mask\"])\n    wf.connect(node, out, erode, \"inputspec.mask\")\n\n    node, out = strat_pool.get_data(\"space-T1w_desc-brain_mask\")\n    wf.connect(node, out, erode, \"inputspec.brain_mask\")\n\n    outputs = {\"label-CSF_desc-eroded_mask\": (erode, \"outputspec.eroded_mask\")}\n\n    return (wf, outputs)",
     "workflows": [
-      "abcd-options",
-      "abcd-prep",
-      "anat-only",
-      "benchmark-ants",
-      "benchmark-fnirt",
-      "blank",
-      "ccs-options",
-      "default-deprecated",
-      "default",
       "fmriprep-options",
       "fx-options",
-      "monkey-abcd",
-      "monkey",
-      "ndmg",
-      "nhp-macaque",
-      "preproc",
-      "rbc-options",
-      "regtest-1",
-      "regtest-2",
-      "regtest-3",
-      "regtest-4",
-      "rodent"
+      "rbc-options"
     ]
   },
   {
@@ -4196,30 +4176,7 @@
     },
     "docstring": null,
     "source_code": "def erode_mask_GM(wf, cfg, strat_pool, pipe_num, opt=None):\n    erode = erode_mask(f\"erode_GM_mask_{pipe_num}\")\n    erode.inputs.inputspec.erode_mm = cfg.nuisance_corrections[\"2-nuisance_regression\"][\n        \"regressor_masks\"\n    ][\"erode_gm\"][\"gm_erosion_mm\"]\n    erode.inputs.inputspec.erode_prop = cfg.nuisance_corrections[\n        \"2-nuisance_regression\"\n    ][\"regressor_masks\"][\"erode_gm\"][\"gm_erosion_prop\"]\n\n    erode.inputs.inputspec.mask_erode_mm = cfg.nuisance_corrections[\n        \"2-nuisance_regression\"\n    ][\"regressor_masks\"][\"erode_gm\"][\"gm_mask_erosion_mm\"]\n\n    node, out = strat_pool.get_data([\"label-GM_desc-preproc_mask\", \"label-GM_mask\"])\n    wf.connect(node, out, erode, \"inputspec.mask\")\n\n    outputs = {\"label-GM_desc-eroded_mask\": (erode, \"outputspec.eroded_mask\")}\n\n    return (wf, outputs)",
-    "workflows": [
-      "abcd-options",
-      "abcd-prep",
-      "anat-only",
-      "benchmark-ants",
-      "benchmark-fnirt",
-      "blank",
-      "ccs-options",
-      "default-deprecated",
-      "default",
-      "fmriprep-options",
-      "fx-options",
-      "monkey-abcd",
-      "monkey",
-      "ndmg",
-      "nhp-macaque",
-      "preproc",
-      "rbc-options",
-      "regtest-1",
-      "regtest-2",
-      "regtest-3",
-      "regtest-4",
-      "rodent"
-    ]
+    "workflows": []
   },
   {
     "name": "erode_mask_WM",
@@ -4257,28 +4214,9 @@
     "docstring": null,
     "source_code": "def erode_mask_WM(wf, cfg, strat_pool, pipe_num, opt=None):\n    erode = erode_mask(f\"erode_WM_mask_{pipe_num}\")\n    erode.inputs.inputspec.erode_mm = cfg.nuisance_corrections[\"2-nuisance_regression\"][\n        \"regressor_masks\"\n    ][\"erode_wm\"][\"wm_erosion_mm\"]\n    erode.inputs.inputspec.erode_prop = cfg.nuisance_corrections[\n        \"2-nuisance_regression\"\n    ][\"regressor_masks\"][\"erode_wm\"][\"wm_erosion_prop\"]\n\n    erode.inputs.inputspec.mask_erode_mm = cfg.nuisance_corrections[\n        \"2-nuisance_regression\"\n    ][\"regressor_masks\"][\"erode_wm\"][\"wm_mask_erosion_mm\"]\n\n    node, out = strat_pool.get_data([\"label-WM_desc-preproc_mask\", \"label-WM_mask\"])\n    wf.connect(node, out, erode, \"inputspec.mask\")\n\n    node, out = strat_pool.get_data(\"space-T1w_desc-brain_mask\")\n    wf.connect(node, out, erode, \"inputspec.brain_mask\")\n\n    outputs = {\"label-WM_desc-eroded_mask\": (erode, \"outputspec.eroded_mask\")}\n\n    return (wf, outputs)",
     "workflows": [
-      "abcd-options",
-      "abcd-prep",
-      "anat-only",
-      "benchmark-ants",
-      "benchmark-fnirt",
-      "blank",
-      "ccs-options",
-      "default-deprecated",
-      "default",
       "fmriprep-options",
       "fx-options",
-      "monkey-abcd",
-      "monkey",
-      "ndmg",
-      "nhp-macaque",
-      "preproc",
-      "rbc-options",
-      "regtest-1",
-      "regtest-2",
-      "regtest-3",
-      "regtest-4",
-      "rodent"
+      "rbc-options"
     ]
   },
   {
@@ -4473,29 +4411,7 @@
     "docstring": null,
     "source_code": "def ingress_regressors(wf, cfg, strat_pool, pipe_num, opt=None):\n    regressors_list = cfg.nuisance_corrections[\"2-nuisance_regression\"][\n        \"ingress_regressors\"\n    ][\"Regressors\"][\"Columns\"]\n\n    # Will need to generalize the name\n    node, out = strat_pool.get_data(\"pipeline-ingress_desc-confounds_timeseries\")\n    if not regressors_list:\n        IFLOGGER.warning(\n            \"\\n[!] Ingress regressors is on, but no regressors provided. \"\n            \"The whole regressors file will be applied, but it may be\"\n            \"too large for the timeseries data!\"\n        )\n        outputs = {\"parsed_regressors\": (node, out)}\n    else:\n        ingress_imports = [\n            \"import numpy as np\",\n            \"import numpy as np\",\n            \"import os\",\n            \"import CPAC\",\n        ]\n        ingress_regressors = pe.Node(\n            Function(\n                input_names=[\"regressors_file\", \"regressors_list\"],\n                output_names=[\"parsed_regressors\"],\n                function=parse_regressors,\n                imports=ingress_imports,\n            ),\n            name=\"parse_regressors_file\",\n        )\n\n        wf.connect(node, out, ingress_regressors, \"regressors_file\")\n        ingress_regressors.inputs.regressors_list = regressors_list\n\n        outputs = {\"parsed_regressors\": (ingress_regressors, \"parsed_regressors\")}\n\n    return wf, outputs",
     "workflows": [
-      "abcd-options",
-      "abcd-prep",
-      "anat-only",
-      "benchmark-ants",
-      "benchmark-fnirt",
-      "blank",
-      "ccs-options",
-      "default-deprecated",
-      "default",
-      "fmriprep-ingress",
-      "fmriprep-options",
-      "fx-options",
-      "monkey-abcd",
-      "monkey",
-      "ndmg",
-      "nhp-macaque",
-      "preproc",
-      "rbc-options",
-      "regtest-1",
-      "regtest-2",
-      "regtest-3",
-      "regtest-4",
-      "rodent"
+      "fmriprep-ingress"
     ]
   },
   {
@@ -4655,12 +4571,7 @@
     },
     "docstring": null,
     "source_code": "def erode_mask_bold(wf, cfg, strat_pool, pipe_num, opt=None):\n    erode = erode_mask(f\"erode_T1w_mask_{pipe_num}\", segmentmap=False)\n    erode.inputs.inputspec.mask_erode_mm = cfg.nuisance_corrections[\n        \"2-nuisance_regression\"\n    ][\"regressor_masks\"][\"erode_anatomical_brain_mask\"][\"brain_mask_erosion_mm\"]\n    erode.inputs.inputspec.erode_prop = cfg.nuisance_corrections[\n        \"2-nuisance_regression\"\n    ][\"regressor_masks\"][\"erode_anatomical_brain_mask\"][\"brain_mask_erosion_prop\"]\n\n    node, out = strat_pool.get_data(\"space-bold_desc-brain_mask\")\n    wf.connect(node, out, erode, \"inputspec.brain_mask\")\n\n    node, out = strat_pool.get_data(\n        [\"space-bold_label-CSF_desc-preproc_mask\", \"space-bold_label-CSF_mask\"]\n    )\n    wf.connect(node, out, erode, \"inputspec.mask\")\n\n    outputs = {\"space-bold_desc-eroded_mask\": (erode, \"outputspec.eroded_mask\")}\n\n    return (wf, outputs)",
-    "workflows": [
-      "fmriprep-options",
-      "fx-options",
-      "rbc-options",
-      "rodent"
-    ]
+    "workflows": []
   },
   {
     "name": "erode_mask_boldCSF",
@@ -4698,12 +4609,7 @@
     },
     "docstring": null,
     "source_code": "def erode_mask_boldCSF(wf, cfg, strat_pool, pipe_num, opt=None):\n    erode = erode_mask(f\"erode_CSF_mask_{pipe_num}\")\n    erode.inputs.inputspec.erode_mm = cfg.nuisance_corrections[\"2-nuisance_regression\"][\n        \"regressor_masks\"\n    ][\"erode_csf\"][\"csf_erosion_mm\"]\n    erode.inputs.inputspec.erode_prop = cfg.nuisance_corrections[\n        \"2-nuisance_regression\"\n    ][\"regressor_masks\"][\"erode_csf\"][\"csf_erosion_prop\"]\n\n    erode.inputs.inputspec.mask_erode_mm = cfg.nuisance_corrections[\n        \"2-nuisance_regression\"\n    ][\"regressor_masks\"][\"erode_csf\"][\"csf_mask_erosion_mm\"]\n\n    node, out = strat_pool.get_data(\n        [\"space-bold_label-CSF_desc-preproc_mask\", \"space-bold_label-CSF_mask\"]\n    )\n    wf.connect(node, out, erode, \"inputspec.mask\")\n\n    node, out = strat_pool.get_data(\"space-bold_desc-brain_mask\")\n    wf.connect(node, out, erode, \"inputspec.brain_mask\")\n\n    outputs = {\n        \"space-bold_label-CSF_desc-eroded_mask\": (erode, \"outputspec.eroded_mask\")\n    }\n\n    return (wf, outputs)",
-    "workflows": [
-      "fmriprep-options",
-      "fx-options",
-      "rbc-options",
-      "rodent"
-    ]
+    "workflows": []
   },
   {
     "name": "erode_mask_boldGM",
@@ -4738,9 +4644,7 @@
     },
     "docstring": null,
     "source_code": "def erode_mask_boldGM(wf, cfg, strat_pool, pipe_num, opt=None):\n    erode = erode_mask(f\"erode_GM_mask_{pipe_num}\")\n    erode.inputs.inputspec.erode_mm = cfg.nuisance_corrections[\"2-nuisance_regression\"][\n        \"regressor_masks\"\n    ][\"erode_gm\"][\"gm_erosion_mm\"]\n    erode.inputs.inputspec.erode_prop = cfg.nuisance_corrections[\n        \"2-nuisance_regression\"\n    ][\"regressor_masks\"][\"erode_gm\"][\"gm_erosion_prop\"]\n\n    erode.inputs.inputspec.mask_erode_mm = cfg.nuisance_corrections[\n        \"2-nuisance_regression\"\n    ][\"regressor_masks\"][\"erode_gm\"][\"gm_mask_erosion_mm\"]\n\n    node, out = strat_pool.get_data(\n        [\"space-bold_label-GM_desc-preproc_mask\", \"space-bold_label-GM_mask\"]\n    )\n    wf.connect(node, out, erode, \"inputspec.mask\")\n\n    outputs = {\n        \"space-bold_label-GM_desc-eroded_mask\": (erode, \"outputspec.eroded_mask\")\n    }\n\n    return (wf, outputs)",
-    "workflows": [
-      "rodent"
-    ]
+    "workflows": []
   },
   {
     "name": "erode_mask_boldWM",
@@ -4778,12 +4682,7 @@
     },
     "docstring": null,
     "source_code": "def erode_mask_boldWM(wf, cfg, strat_pool, pipe_num, opt=None):\n    erode = erode_mask(f\"erode_WM_mask_{pipe_num}\")\n    erode.inputs.inputspec.erode_mm = cfg.nuisance_corrections[\"2-nuisance_regression\"][\n        \"regressor_masks\"\n    ][\"erode_wm\"][\"wm_erosion_mm\"]\n    erode.inputs.inputspec.erode_prop = cfg.nuisance_corrections[\n        \"2-nuisance_regression\"\n    ][\"regressor_masks\"][\"erode_wm\"][\"wm_erosion_prop\"]\n\n    erode.inputs.inputspec.mask_erode_mm = cfg.nuisance_corrections[\n        \"2-nuisance_regression\"\n    ][\"regressor_masks\"][\"erode_wm\"][\"wm_mask_erosion_mm\"]\n\n    node, out = strat_pool.get_data(\n        [\"space-bold_label-WM_desc-preproc_mask\", \"space-bold_label-WM_mask\"]\n    )\n    wf.connect(node, out, erode, \"inputspec.mask\")\n\n    node, out = strat_pool.get_data(\"space-bold_desc-brain_mask\")\n    wf.connect(node, out, erode, \"inputspec.brain_mask\")\n\n    outputs = {\n        \"space-bold_label-WM_desc-eroded_mask\": (erode, \"outputspec.eroded_mask\")\n    }\n\n    return (wf, outputs)",
-    "workflows": [
-      "fmriprep-options",
-      "fx-options",
-      "rbc-options",
-      "rodent"
-    ]
+    "workflows": []
   },
   {
     "name": "qc_snr_plot",
@@ -5260,27 +5159,21 @@
     "docstring": null,
     "source_code": "def qc_bold_registration(wf, cfg, strat_pool, pipe_num, opt=None):\n    # make QC montage for Mean Functional in MNI with MNI edge\n    montage_mfi = create_montage(\n        f\"montage_mfi_{pipe_num}\", \"red\", \"MNI_edge_on_mean_func_mni\", mapnode=False\n    )\n\n    node, out = strat_pool.get_data(\"space-template_sbref\")\n    wf.connect(node, out, montage_mfi, \"inputspec.underlay\")\n\n    func_template_edge = pe.Node(\n        Function(\n            input_names=[\"in_file\"],\n            output_names=[\"out_file\"],\n            function=afni_Edge3,\n            as_module=True,\n        ),\n        name=f\"func_template_edge_{pipe_num}\",\n    )\n\n    node, out = strat_pool.get_data(\"T1w-brain-template-funcreg\")\n    wf.connect(node, out, func_template_edge, \"in_file\")\n\n    wf.connect(func_template_edge, \"out_file\", montage_mfi, \"inputspec.overlay\")\n\n    outputs = {\n        \"space-template_desc-boldAxial_quality\": (montage_mfi, \"outputspec.axial_png\"),\n        \"space-template_desc-boldSagittal_quality\": (\n            montage_mfi,\n            \"outputspec.sagittal_png\",\n        ),\n    }\n\n    return (wf, outputs)",
     "workflows": [
-      "abcd-options",
       "anat-only",
       "benchmark-ants",
       "benchmark-fnirt",
       "ccs-options",
       "default-deprecated",
       "default",
-      "fmriprep-ingress",
-      "fmriprep-options",
-      "fx-options",
       "monkey-abcd",
       "monkey",
       "ndmg",
       "nhp-macaque",
       "preproc",
-      "rbc-options",
       "regtest-1",
       "regtest-2",
       "regtest-3",
-      "regtest-4",
-      "rodent"
+      "regtest-4"
     ]
   },
   {
@@ -5318,22 +5211,6 @@
     "docstring": null,
     "source_code": "def qc_bold_EPI_registration(wf, cfg, strat_pool, pipe_num, opt=None):\n    # make QC montage for Mean Functional in MNI with MNI edge\n    montage_mfi = create_montage(\n        f\"montage_mfi_{pipe_num}\", \"red\", \"EPI_MNI_edge_on_mean_func_mni\", mapnode=False\n    )\n\n    node, out = strat_pool.get_data(\"space-template_sbref\")\n    wf.connect(node, out, montage_mfi, \"inputspec.underlay\")\n\n    func_template_edge = pe.Node(\n        Function(\n            input_names=[\"in_file\"],\n            output_names=[\"out_file\"],\n            function=afni_Edge3,\n            as_module=True,\n        ),\n        name=f\"EPI_func_template_edge_{pipe_num}\",\n    )\n\n    node, out = strat_pool.get_data(\"EPI-template-funcreg\")\n    wf.connect(node, out, func_template_edge, \"in_file\")\n\n    wf.connect(func_template_edge, \"out_file\", montage_mfi, \"inputspec.overlay\")\n\n    outputs = {\n        \"space-template_desc-boldAxial_quality\": (montage_mfi, \"outputspec.axial_png\"),\n        \"space-template_desc-boldSagittal_quality\": (\n            montage_mfi,\n            \"outputspec.sagittal_png\",\n        ),\n    }\n\n    return (wf, outputs)",
     "workflows": [
-      "anat-only",
-      "benchmark-ants",
-      "benchmark-fnirt",
-      "ccs-options",
-      "default-deprecated",
-      "default",
-      "fmriprep-ingress",
-      "monkey-abcd",
-      "monkey",
-      "ndmg",
-      "nhp-macaque",
-      "preproc",
-      "regtest-1",
-      "regtest-2",
-      "regtest-3",
-      "regtest-4",
       "rodent"
     ]
   },
@@ -5776,25 +5653,7 @@
     "docstring": "Overwrite ANTs transforms with FSL transforms.",
     "source_code": "def overwrite_transform_anat_to_template(wf, cfg, strat_pool, pipe_num, opt=None):\n    \"\"\"Overwrite ANTs transforms with FSL transforms.\"\"\"\n    xfm_prov = strat_pool.get_cpac_provenance(\"from-T1w_to-template_mode-image_xfm\")\n\n    reg_tool = check_prov_for_regtool(xfm_prov)\n\n    if opt.lower() == \"fsl\" and reg_tool.lower() == \"ants\":\n        # Apply head-to-head transforms on brain using ABCD-style registration\n        # Convert ANTs warps to FSL warps to be consistent with the functional registration\n        # Ref: https://github.com/DCAN-Labs/DCAN-HCP/blob/e8d373d/PostFreeSurfer/scripts/AtlasRegistrationToMNI152_ANTsbased.sh#L134-L172\n\n        # antsApplyTransforms -d 3 -i ${T1wRestore}.nii.gz -r ${Reference} \\\n        # -t ${WD}/xfms/T1w_to_MNI_3Warp.nii.gz \\\n        # -t ${WD}/xfms/T1w_to_MNI_2Affine.mat \\\n        # -t ${WD}/xfms/T1w_to_MNI_1Rigid.mat \\\n        # -t ${WD}/xfms/T1w_to_MNI_0DerivedInitialMovingTranslation.mat \\\n        # -o [${WD}/xfms/ANTs_CombinedWarp.nii.gz,1]\n        ants_apply_warp_t1_to_template = pe.Node(\n            interface=ants.ApplyTransforms(),\n            name=f\"ANTS-ABCD_T1_to_template_{pipe_num}\",\n        )\n        ants_apply_warp_t1_to_template.inputs.dimension = 3\n        ants_apply_warp_t1_to_template.inputs.print_out_composite_warp_file = True\n        ants_apply_warp_t1_to_template.inputs.output_image = \"ANTs_CombinedWarp.nii.gz\"\n\n        node, out = strat_pool.get_data([\"desc-restore_T1w\", \"desc-preproc_T1w\"])\n        wf.connect(node, out, ants_apply_warp_t1_to_template, \"input_image\")\n\n        node, out = strat_pool.get_data(\"T1w-template\")\n        wf.connect(node, out, ants_apply_warp_t1_to_template, \"reference_image\")\n\n        node, out = strat_pool.get_data(\"from-T1w_to-template_mode-image_xfm\")\n        wf.connect(node, out, ants_apply_warp_t1_to_template, \"transforms\")\n\n        # antsApplyTransforms -d 3 -i ${T1wImage}.nii.gz -r ${Reference} \\\n        # -t [${WD}/xfms/T1w_to_MNI_0DerivedInitialMovingTranslation.mat,1] \\\n        # -t [${WD}/xfms/T1w_to_MNI_1Rigid.mat,1] \\\n        # -t [${WD}/xfms/T1w_to_MNI_2Affine.mat,1] \\\n        # -t ${WD}/xfms/T1w_to_MNI_3InverseWarp.nii.gz \\\n        # -o [${WD}/xfms/ANTs_CombinedInvWarp.nii.gz,1]\n\n        # T1wImage is ACPC aligned head\n        ants_apply_warp_template_to_t1 = pe.Node(\n            interface=ants.ApplyTransforms(),\n            name=f\"ANTS-ABCD_template_to_T1_{pipe_num}\",\n        )\n        ants_apply_warp_template_to_t1.inputs.dimension = 3\n        ants_apply_warp_template_to_t1.inputs.print_out_composite_warp_file = True\n        ants_apply_warp_template_to_t1.inputs.output_image = (\n            \"ANTs_CombinedInvWarp.nii.gz\"\n        )\n\n        node, out = strat_pool.get_data(\"desc-preproc_T1w\")\n        wf.connect(node, out, ants_apply_warp_template_to_t1, \"input_image\")\n\n        node, out = strat_pool.get_data(\"T1w-template\")\n        wf.connect(node, out, ants_apply_warp_template_to_t1, \"reference_image\")\n\n        node, out = strat_pool.get_data(\"from-template_to-T1w_mode-image_xfm\")\n        wf.connect(node, out, ants_apply_warp_template_to_t1, \"transforms\")\n\n        # c4d -mcs ${WD}/xfms/ANTs_CombinedWarp.nii.gz -oo ${WD}/xfms/e1.nii.gz ${WD}/xfms/e2.nii.gz ${WD}/xfms/e3.nii.gz\n        # -mcs: -multicomponent-split, -oo: -output-multiple\n        split_combined_warp = pe.Node(\n            Function(\n                input_names=[\"input_name\", \"output_name\"],\n                output_names=[\"output1\", \"output2\", \"output3\"],\n                function=run_c4d,\n            ),\n            name=f\"split_combined_warp_{pipe_num}\",\n        )\n        split_combined_warp.inputs.output_name = \"e\"\n\n        wf.connect(\n            ants_apply_warp_t1_to_template,\n            \"output_image\",\n            split_combined_warp,\n            \"input_name\",\n        )\n\n        # c4d -mcs ${WD}/xfms/ANTs_CombinedInvWarp.nii.gz -oo ${WD}/xfms/e1inv.nii.gz ${WD}/xfms/e2inv.nii.gz ${WD}/xfms/e3inv.nii.gz\n        split_combined_inv_warp = pe.Node(\n            Function(\n                input_names=[\"input_name\", \"output_name\"],\n                output_names=[\"output1\", \"output2\", \"output3\"],\n                function=run_c4d,\n            ),\n            name=f\"split_combined_inv_warp_{pipe_num}\",\n        )\n        split_combined_inv_warp.inputs.output_name = \"einv\"\n\n        wf.connect(\n            ants_apply_warp_template_to_t1,\n            \"output_image\",\n            split_combined_inv_warp,\n            \"input_name\",\n        )\n\n        # fslmaths ${WD}/xfms/e2.nii.gz -mul -1 ${WD}/xfms/e-2.nii.gz\n        change_e2_sign = pe.Node(\n            interface=fsl.maths.MathsCommand(), name=f\"change_e2_sign_{pipe_num}\"\n        )\n        change_e2_sign.inputs.args = \"-mul -1\"\n\n        wf.connect(split_combined_warp, \"output2\", change_e2_sign, \"in_file\")\n\n        # fslmaths ${WD}/xfms/e2inv.nii.gz -mul -1 ${WD}/xfms/e-2inv.nii.gz\n        change_e2inv_sign = pe.Node(\n            interface=fsl.maths.MathsCommand(), name=f\"change_e2inv_sign_{pipe_num}\"\n        )\n        change_e2inv_sign.inputs.args = \"-mul -1\"\n\n        wf.connect(split_combined_inv_warp, \"output2\", change_e2inv_sign, \"in_file\")\n\n        # fslmerge -t ${OutputTransform} ${WD}/xfms/e1.nii.gz ${WD}/xfms/e-2.nii.gz ${WD}/xfms/e3.nii.gz\n        merge_xfms_to_list = pe.Node(\n            util.Merge(3), name=f\"merge_t1_to_template_xfms_to_list_{pipe_num}\"\n        )\n\n        wf.connect(split_combined_warp, \"output1\", merge_xfms_to_list, \"in1\")\n        wf.connect(change_e2_sign, \"out_file\", merge_xfms_to_list, \"in2\")\n        wf.connect(split_combined_warp, \"output3\", merge_xfms_to_list, \"in3\")\n\n        merge_xfms = pe.Node(\n            interface=fslMerge(), name=f\"merge_t1_to_template_xfms_{pipe_num}\"\n        )\n        merge_xfms.inputs.dimension = \"t\"\n\n        wf.connect(merge_xfms_to_list, \"out\", merge_xfms, \"in_files\")\n\n        # fslmerge -t ${OutputInvTransform} ${WD}/xfms/e1inv.nii.gz ${WD}/xfms/e-2inv.nii.gz ${WD}/xfms/e3inv.nii.gz\n        merge_inv_xfms_to_list = pe.Node(\n            util.Merge(3), name=f\"merge_template_to_t1_xfms_to_list_{pipe_num}\"\n        )\n\n        wf.connect(split_combined_inv_warp, \"output1\", merge_inv_xfms_to_list, \"in1\")\n        wf.connect(change_e2inv_sign, \"out_file\", merge_inv_xfms_to_list, \"in2\")\n        wf.connect(split_combined_inv_warp, \"output3\", merge_inv_xfms_to_list, \"in3\")\n\n        merge_inv_xfms = pe.Node(\n            interface=fslMerge(), name=f\"merge_template_to_t1_xfms_{pipe_num}\"\n        )\n        merge_inv_xfms.inputs.dimension = \"t\"\n\n        wf.connect(merge_inv_xfms_to_list, \"out\", merge_inv_xfms, \"in_files\")\n\n        # applywarp --rel --interp=spline -i ${T1wRestore} -r ${Reference} -w ${OutputTransform} -o ${OutputT1wImageRestore}\n        fsl_apply_warp_t1_to_template = pe.Node(\n            interface=fsl.ApplyWarp(), name=f\"FSL-ABCD_T1_to_template_{pipe_num}\"\n        )\n        fsl_apply_warp_t1_to_template.inputs.relwarp = True\n        fsl_apply_warp_t1_to_template.inputs.interp = \"spline\"\n\n        node, out = strat_pool.get_data([\"desc-restore_T1w\", \"desc-preproc_T1w\"])\n        wf.connect(node, out, fsl_apply_warp_t1_to_template, \"in_file\")\n\n        node, out = strat_pool.get_data(\"T1w-template\")\n        wf.connect(node, out, fsl_apply_warp_t1_to_template, \"ref_file\")\n\n        wf.connect(\n            merge_xfms, \"merged_file\", fsl_apply_warp_t1_to_template, \"field_file\"\n        )\n\n        # applywarp --rel --interp=nn -i ${T1wRestoreBrain} -r ${Reference} -w ${OutputTransform} -o ${OutputT1wImageRestoreBrain}\n        fsl_apply_warp_t1_brain_to_template = pe.Node(\n            interface=fsl.ApplyWarp(), name=f\"FSL-ABCD_T1_brain_to_template_{pipe_num}\"\n        )\n        fsl_apply_warp_t1_brain_to_template.inputs.relwarp = True\n        fsl_apply_warp_t1_brain_to_template.inputs.interp = \"nn\"\n\n        # TODO connect T1wRestoreBrain, check T1wRestoreBrain quality\n        node, out = strat_pool.get_data(\"desc-preproc_T1w\")\n        wf.connect(node, out, fsl_apply_warp_t1_brain_to_template, \"in_file\")\n\n        node, out = strat_pool.get_data(\"T1w-template\")\n        wf.connect(node, out, fsl_apply_warp_t1_brain_to_template, \"ref_file\")\n\n        wf.connect(\n            merge_xfms, \"merged_file\", fsl_apply_warp_t1_brain_to_template, \"field_file\"\n        )\n\n        fsl_apply_warp_t1_brain_mask_to_template = pe.Node(\n            interface=fsl.ApplyWarp(),\n            name=f\"FSL-ABCD_T1_brain_mask_to_template_{pipe_num}\",\n        )\n        fsl_apply_warp_t1_brain_mask_to_template.inputs.relwarp = True\n        fsl_apply_warp_t1_brain_mask_to_template.inputs.interp = \"nn\"\n\n        node, out = strat_pool.get_data(\"space-T1w_desc-brain_mask\")\n        wf.connect(node, out, fsl_apply_warp_t1_brain_mask_to_template, \"in_file\")\n\n        node, out = strat_pool.get_data(\"T1w-template\")\n        wf.connect(node, out, fsl_apply_warp_t1_brain_mask_to_template, \"ref_file\")\n\n        wf.connect(\n            merge_xfms,\n            \"merged_file\",\n            fsl_apply_warp_t1_brain_mask_to_template,\n            \"field_file\",\n        )\n\n        # fslmaths ${OutputT1wImageRestore} -mas ${OutputT1wImageRestoreBrain} ${OutputT1wImageRestoreBrain}\n        apply_mask = pe.Node(\n            interface=fsl.maths.ApplyMask(), name=f\"get_t1_brain_{pipe_num}\"\n        )\n\n        wf.connect(fsl_apply_warp_t1_to_template, \"out_file\", apply_mask, \"in_file\")\n\n        wf.connect(\n            fsl_apply_warp_t1_brain_to_template, \"out_file\", apply_mask, \"mask_file\"\n        )\n\n        outputs = {\n            \"space-template_desc-preproc_T1w\": (apply_mask, \"out_file\"),\n            \"space-template_desc-head_T1w\": (fsl_apply_warp_t1_to_template, \"out_file\"),\n            \"space-template_desc-T1w_mask\": (\n                fsl_apply_warp_t1_brain_mask_to_template,\n                \"out_file\",\n            ),\n            \"from-T1w_to-template_mode-image_xfm\": (merge_xfms, \"merged_file\"),\n            \"from-template_to-T1w_mode-image_xfm\": (merge_inv_xfms, \"merged_file\"),\n        }\n\n    return (wf, outputs)",
     "workflows": [
-      "abcd-options",
-      "anat-only",
-      "benchmark-ants",
-      "benchmark-fnirt",
-      "ccs-options",
-      "default-deprecated",
-      "default",
-      "fmriprep-options",
-      "fx-options",
-      "monkey-abcd",
-      "monkey",
-      "ndmg",
-      "nhp-macaque",
-      "preproc",
-      "rbc-options",
-      "regtest-1",
-      "regtest-2",
-      "regtest-3",
-      "regtest-4"
+      "abcd-options"
     ]
   },
   {
@@ -5889,7 +5748,6 @@
     "source_code": "def coregistration_prep_mean(wf, cfg, strat_pool, pipe_num, opt=None):\n    \"\"\"Create single-band reference for coregistration from mean BOLD.\"\"\"\n    coreg_input = strat_pool.get_data(\"desc-mean_bold\")\n\n    # TODO add mean skull\n    if cfg.registration_workflows[\"functional_registration\"][\"coregistration\"][\n        \"func_input_prep\"\n    ][\"Mean Functional\"][\"n4_correct_func\"]:\n        n4_correct_func = pe.Node(\n            interface=ants.N4BiasFieldCorrection(\n                dimension=3, copy_header=True, bspline_fitting_distance=200\n            ),\n            shrink_factor=2,\n            name=f\"func_mean_n4_corrected_{pipe_num}\",\n        )\n        n4_correct_func.inputs.args = \"-r True\"\n\n        node, out = coreg_input\n        wf.connect(node, out, n4_correct_func, \"input_image\")\n\n        coreg_input = (n4_correct_func, \"output_image\")\n\n    outputs = {\"sbref\": coreg_input}\n\n    return (wf, outputs)",
     "workflows": [
       "abcd-options",
-      "anat-only",
       "benchmark-ants",
       "benchmark-fnirt",
       "ccs-options",
@@ -5946,7 +5804,6 @@
     "source_code": "def coregistration_prep_fmriprep(wf, cfg, strat_pool, pipe_num, opt=None):\n    \"\"\"Generate fMRIPrep-style single-band reference for coregistration.\"\"\"\n    coreg_input = strat_pool.get_data(\"desc-ref_bold\")\n\n    outputs = {\"sbref\": coreg_input}\n\n    return (wf, outputs)",
     "workflows": [
       "abcd-options",
-      "anat-only",
       "benchmark-ants",
       "benchmark-fnirt",
       "ccs-options",
@@ -6208,15 +6065,11 @@
     "source_code": "def apply_phasediff_to_timeseries_separately(wf, cfg, strat_pool, pipe_num, opt=None):\n    \"\"\"Apply phasediff to timeseries.\"\"\"\n    outputs = {\"desc-preproc_bold\": strat_pool.get_data(\"desc-preproc_bold\")}\n    if not strat_pool.check_rpool(\"despiked-fieldmap\"):\n        return (wf, outputs)\n\n    invert_coreg_xfm = pe.Node(\n        interface=fsl.ConvertXFM(), name=f\"invert_coreg_xfm_{pipe_num}\"\n    )\n    invert_coreg_xfm.inputs.invert_xfm = True\n\n    node, out = strat_pool.get_data(\"from-bold_to-T1w_mode-image_desc-linear_xfm\")\n    wf.connect(node, out, invert_coreg_xfm, \"in_file\")\n\n    warp_fmap = pe.Node(interface=fsl.ApplyWarp(), name=f\"warp_fmap_{pipe_num}\")\n\n    node, out = strat_pool.get_data(\"despiked-fieldmap\")\n    wf.connect(node, out, warp_fmap, \"in_file\")\n\n    node, out = strat_pool.get_data(\"sbref\")\n    wf.connect(node, out, warp_fmap, \"ref_file\")\n\n    wf.connect(invert_coreg_xfm, \"out_file\", warp_fmap, \"premat\")\n\n    mask_fmap = pe.Node(\n        interface=fsl.maths.MathsCommand(), name=f\"mask_fmap_{pipe_num}\"\n    )\n    mask_fmap.inputs.args = \"-abs -bin\"\n\n    wf.connect(warp_fmap, \"out_file\", mask_fmap, \"in_file\")\n\n    conv_pedir = pe.Node(\n        interface=Function(\n            input_names=[\"pedir\", \"convert\"],\n            output_names=[\"pedir\"],\n            function=convert_pedir,\n        ),\n        name=f\"apply_phasediff_convert_pedir_{pipe_num}\",\n    )\n    conv_pedir.inputs.convert = \"ijk_to_xyz\"\n\n    node, out = strat_pool.get_data(\"pe-direction\")\n    wf.connect(node, out, conv_pedir, \"pedir\")\n\n    fugue_saveshift = pe.Node(interface=fsl.FUGUE(), name=f\"fugue_saveshift_{pipe_num}\")\n    fugue_saveshift.inputs.save_shift = True\n\n    wf.connect(warp_fmap, \"out_file\", fugue_saveshift, \"fmap_in_file\")\n    wf.connect(mask_fmap, \"out_file\", fugue_saveshift, \"mask_file\")\n\n    # FSL calls effective echo spacing = dwell time (not accurate)\n    node, out = strat_pool.get_data(\"effectiveEchoSpacing\")\n    wf.connect(node, out, fugue_saveshift, \"dwell_time\")\n\n    wf.connect(conv_pedir, \"pedir\", fugue_saveshift, \"unwarp_direction\")\n\n    shift_warp = pe.Node(interface=fsl.ConvertWarp(), name=f\"shift_warp_{pipe_num}\")\n    shift_warp.inputs.out_relwarp = True\n\n    wf.connect(fugue_saveshift, \"shift_out_file\", shift_warp, \"shift_in_file\")\n\n    node, out = strat_pool.get_data(\"sbref\")\n    wf.connect(node, out, shift_warp, \"reference\")\n\n    wf.connect(conv_pedir, \"pedir\", shift_warp, \"shift_direction\")\n\n    warp_bold = pe.Node(\n        interface=fsl.ApplyWarp(), name=f\"warp_bold_phasediff_{pipe_num}\"\n    )\n    warp_bold.inputs.relwarp = True\n    warp_bold.inputs.interp = \"spline\"\n\n    if opt == \"default\":\n        node, out = strat_pool.get_data(\"desc-preproc_bold\")\n        out_label = \"desc-preproc_bold\"\n    elif opt == \"single_step_resampling_from_stc\":\n        node, out = strat_pool.get_data(\"desc-stc_bold\")\n        out_label = \"desc-stc_bold\"\n    elif opt == \"abcd\":\n        node, out = strat_pool.get_data(\"bold\")\n        out_label = \"bold\"\n\n    wf.connect(node, out, warp_bold, \"in_file\")\n\n    node, out = strat_pool.get_data(\"sbref\")\n    wf.connect(node, out, warp_bold, \"ref_file\")\n\n    wf.connect(shift_warp, \"out_file\", warp_bold, \"field_file\")\n\n    warp_sbref = pe.Node(\n        interface=fsl.ApplyWarp(), name=f\"warp_sbref_phasediff_{pipe_num}\"\n    )\n    warp_sbref.inputs.relwarp = True\n    warp_sbref.inputs.interp = \"spline\"\n\n    node, out = strat_pool.get_data(\"sbref\")\n    wf.connect(node, out, warp_sbref, \"in_file\")\n    wf.connect(node, out, warp_sbref, \"ref_file\")\n\n    wf.connect(shift_warp, \"out_file\", warp_sbref, \"field_file\")\n\n    outputs = {out_label: (warp_bold, \"out_file\"), \"sbref\": (warp_sbref, \"out_file\")}\n\n    return (wf, outputs)",
     "workflows": [
       "abcd-options",
-      "abcd-prep",
-      "anat-only",
       "benchmark-ants",
       "benchmark-fnirt",
-      "blank",
       "ccs-options",
       "default-deprecated",
       "default",
-      "fmriprep-ingress",
       "fmriprep-options",
       "fx-options",
       "monkey-abcd",
@@ -6284,15 +6137,11 @@
     "source_code": "def apply_blip_to_timeseries_separately(wf, cfg, strat_pool, pipe_num, opt=None):\n    \"\"\"Apply blip to timeseries.\"\"\"\n    xfm_prov = strat_pool.get_cpac_provenance(\"from-bold_to-template_mode-image_xfm\")\n    reg_tool = check_prov_for_regtool(xfm_prov)\n\n    outputs = {\"desc-preproc_bold\": strat_pool.get_data(\"desc-preproc_bold\")}\n    if strat_pool.check_rpool(\"ants-blip-warp\"):\n        if reg_tool == \"fsl\":\n            blip_node, blip_out = strat_pool.get_data(\"ants-blip-warp\")\n            reg_tool = \"ants\"\n        else:\n            return (wf, outputs)\n    elif strat_pool.check_rpool(\"fsl-blip-warp\"):\n        if reg_tool == \"ants\":\n            blip_node, blip_out = strat_pool.get_data(\"fsl-blip-warp\")\n            reg_tool = \"fsl\"\n        else:\n            return (wf, outputs)\n    else:\n        return (wf, outputs)\n\n    num_cpus = cfg.pipeline_setup[\"system_config\"][\"max_cores_per_participant\"]\n\n    num_ants_cores = cfg.pipeline_setup[\"system_config\"][\"num_ants_threads\"]\n\n    apply_xfm = apply_transform(\n        f\"warp_ts_to_blip_sep_{pipe_num}\",\n        reg_tool,\n        time_series=True,\n        num_cpus=num_cpus,\n        num_ants_cores=num_ants_cores,\n    )\n\n    if reg_tool == \"ants\":\n        apply_xfm.inputs.inputspec.interpolation = cfg.registration_workflows[\n            \"functional_registration\"\n        ][\"func_registration_to_template\"][\"ANTs_pipelines\"][\"interpolation\"]\n    elif reg_tool == \"fsl\":\n        apply_xfm.inputs.inputspec.interpolation = cfg.registration_workflows[\n            \"functional_registration\"\n        ][\"func_registration_to_template\"][\"FNIRT_pipelines\"][\"interpolation\"]\n\n    if opt == \"default\":\n        node, out = strat_pool.get_data(\"desc-preproc_bold\")\n        out_label = \"desc-preproc_bold\"\n    elif opt == \"single_step_resampling_from_stc\":\n        node, out = strat_pool.get_data(\"desc-stc_bold\")\n        out_label = \"desc-stc_bold\"\n    elif opt == \"abcd\":\n        node, out = strat_pool.get_data(\"bold\")\n        out_label = \"bold\"\n\n    wf.connect(node, out, apply_xfm, \"inputspec.input_image\")\n\n    node, out = strat_pool.get_data(\"sbref\")\n    wf.connect(node, out, apply_xfm, \"inputspec.reference\")\n\n    wf.connect(blip_node, blip_out, apply_xfm, \"inputspec.transform\")\n\n    outputs = {out_label: (apply_xfm, \"outputspec.output_image\")}\n\n    return (wf, outputs)",
     "workflows": [
       "abcd-options",
-      "abcd-prep",
-      "anat-only",
       "benchmark-ants",
       "benchmark-fnirt",
-      "blank",
       "ccs-options",
       "default-deprecated",
       "default",
-      "fmriprep-ingress",
       "fmriprep-options",
       "fx-options",
       "monkey-abcd",
@@ -6390,7 +6239,6 @@
     "source_code": "def warp_T1mask_to_template(wf, cfg, strat_pool, pipe_num, opt=None):\n    \"\"\"Warp T1 mask to template.\"\"\"\n    xfm_prov = strat_pool.get_cpac_provenance(\"from-T1w_to-template_mode-image_xfm\")\n    reg_tool = check_prov_for_regtool(xfm_prov)\n\n    num_cpus = cfg.pipeline_setup[\"system_config\"][\"max_cores_per_participant\"]\n\n    num_ants_cores = cfg.pipeline_setup[\"system_config\"][\"num_ants_threads\"]\n\n    apply_xfm = apply_transform(\n        f\"warp_T1mask_to_T1template_{pipe_num}\",\n        reg_tool,\n        time_series=False,\n        num_cpus=num_cpus,\n        num_ants_cores=num_ants_cores,\n    )\n\n    apply_xfm.inputs.inputspec.interpolation = \"NearestNeighbor\"\n    \"\"\"\n    if reg_tool == 'ants':\n        apply_xfm.inputs.inputspec.interpolation = cfg.registration_workflows[\n            'functional_registration']['func_registration_to_template'][\n            'ANTs_pipelines']['interpolation']\n    elif reg_tool == 'fsl':\n        apply_xfm.inputs.inputspec.interpolation = cfg.registration_workflows[\n            'functional_registration']['func_registration_to_template'][\n            'FNIRT_pipelines']['interpolation']\n    \"\"\"\n    connect = strat_pool.get_data(\"space-T1w_desc-brain_mask\")\n    node, out = connect\n    wf.connect(node, out, apply_xfm, \"inputspec.input_image\")\n\n    node, out = strat_pool.get_data(\"T1w-template\")\n    wf.connect(node, out, apply_xfm, \"inputspec.reference\")\n\n    node, out = strat_pool.get_data(\"from-T1w_to-template_mode-image_xfm\")\n    wf.connect(node, out, apply_xfm, \"inputspec.transform\")\n\n    outputs = {\"space-template_desc-brain_mask\": (apply_xfm, \"outputspec.output_image\")}\n\n    return (wf, outputs)",
     "workflows": [
       "abcd-options",
-      "abcd-prep",
       "anat-only",
       "benchmark-ants",
       "benchmark-fnirt",
@@ -6408,8 +6256,7 @@
       "regtest-1",
       "regtest-2",
       "regtest-3",
-      "regtest-4",
-      "rodent"
+      "regtest-4"
     ]
   },
   {
@@ -6789,7 +6636,6 @@
     "source_code": "def warp_bold_mask_to_T1template(wf, cfg, strat_pool, pipe_num, opt=None):\n    \"\"\"Warp BOLD mask to T1 template.\"\"\"\n    xfm = \"from-bold_to-template_mode-image_xfm\"\n    wf, apply_xfm = warp_resource_to_template(\n        wf,\n        cfg,\n        strat_pool,\n        pipe_num,\n        \"space-bold_desc-brain_mask\",\n        xfm,\n        reference=\"T1w-brain-template-funcreg\",\n        time_series=False,\n    )[:2]\n    outputs = {\"space-template_desc-bold_mask\": (apply_xfm, \"outputspec.output_image\")}\n    return _warp_return(wf, apply_xfm, outputs)",
     "workflows": [
       "abcd-options",
-      "anat-only",
       "benchmark-ants",
       "benchmark-fnirt",
       "ccs-options",
@@ -6806,8 +6652,7 @@
       "regtest-1",
       "regtest-2",
       "regtest-3",
-      "regtest-4",
-      "rodent"
+      "regtest-4"
     ]
   },
   {
@@ -6854,7 +6699,6 @@
     "source_code": "def warp_deriv_mask_to_T1template(wf, cfg, strat_pool, pipe_num, opt=None):\n    \"\"\"Transform the BOLD mask to template space...\n\n    ...and to the resolution set for the derivative outputs.\n    \"\"\"\n    xfm = \"from-bold_to-template_mode-image_xfm\"\n    wf, apply_xfm = warp_resource_to_template(\n        wf,\n        cfg,\n        strat_pool,\n        pipe_num,\n        \"space-bold_desc-brain_mask\",\n        xfm,\n        reference=\"T1w-brain-template-deriv\",\n        time_series=False,\n    )[:2]\n    outputs = {\n        \"space-template_res-derivative_desc-bold_mask\": (\n            apply_xfm,\n            \"outputspec.output_image\",\n        )\n    }\n    return _warp_return(wf, apply_xfm, outputs)",
     "workflows": [
       "abcd-options",
-      "anat-only",
       "benchmark-ants",
       "benchmark-fnirt",
       "ccs-options",
@@ -6871,8 +6715,7 @@
       "regtest-1",
       "regtest-2",
       "regtest-3",
-      "regtest-4",
-      "rodent"
+      "regtest-4"
     ]
   },
   {
